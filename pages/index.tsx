@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 		</nav>
-		<main className="w-screen max-w-lg mx-auto overflow-hidden px-4">
+		<main className="w-screen max-w-sm mx-auto overflow-hidden px-4">
 			<div className=" grid grid-cols-3 gap-2">
 				<div className="text-left">
 					<span className="font-bold font-mplus ">About</span>
