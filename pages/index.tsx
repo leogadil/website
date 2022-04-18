@@ -1,84 +1,63 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import { useTheme } from 'next-themes'
+import {useState, useEffect} from 'react'
+
+import {IoIosMoon, IoMdSunny} from 'react-icons/io'
+// import {BsFillMoonFill, BsFillSunFill} from 'react-icons/bs';
+
 
 const Home: NextPage = () => {
+  const [mounted, setMounted] = useState(false)
+  const {theme, setTheme} = useTheme()
+  useEffect(() => setMounted(true), [])
+  if(!mounted) return null
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+    <div className="w-screen h-screen bg-th-light dark:bg-th-dark transition-colors duration-300">
+		<nav className="w-screen" >
+			<div className="p-4 max-w-3xl mx-auto flex flex-row justify-between">
+				<div className="flex flex-row items-center">
+					{/* <img src="/vercel.svg" className="h-12" /> */}
+					{/* <div className="bg-white w-3 h-3 border-2 border-color rounded mr-2"></div> */}
+					<h1 className="text-2xl font-mplus font-bold" >Leogadil</h1>
+				</div>
+				<div className="flex flex-row items-center">
+					<ul className="flex mr-4">
+						<li className="flex-1 mr-3 cursor-pointer">Projects</li>
+						<li className="flex-1 cursor-pointer">Blog</li>
+					</ul>
+					<button 
+						className="bg-transparent bg-accent-2 dark:bg-accent-1 p-2 rounded"  
+						onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+					>{theme === 'light' ? <IoIosMoon size="1.5em"/> : <IoMdSunny size="1.5em"/>}</button>
+				</div>
+			</div>
+		</nav>
+		<main className="w-screen max-w-lg mx-auto overflow-hidden px-4">
+			<div className=" grid grid-cols-3 gap-2">
+				<div className="text-left">
+					<span className="font-bold font-mplus ">About</span>
+				</div>
+				<div className="col-span-2 break-words">
+					<p className="text-justify mb-3">
+						Hello, I'm Jann Leo Gadil, a full-stack developer based
+						in Manila. I like creating scripts, programs, and
+						websites thats peaks the interests of users. as a
+						full-stack developer.
+					</p>
+					<p className="text-justify mb-3">
+						I remember the first software i built, a voice
+						recognition program in C# like J.A.R.V.I.S from Iron
+						Man. it's feature is playing music, tell the
+						news, even search from voice.
+					</p>
+					<p className="text-justify">
+						Now, I am able to create all kinds of program, scripts,
+						websites that helps clients, businesses, in their needs.
+					</p>
+				</div>
+			</div>
+		</main>
+        
     </div>
   )
 }
