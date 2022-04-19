@@ -7,7 +7,7 @@ type ILink = {
 
 const Link : React.FC<ILink> = ({link, text}) => {
     return (
-        <a href={link} className="font-bold hover:underline dark:text-main-accent text-accent-2">{text}</a>
+        <a href={link} className="font-bold hover:underline dark:text-main-accent text-accent-2 break-words">{text}</a>
     )
 }
 
