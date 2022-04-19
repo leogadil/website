@@ -2,7 +2,11 @@ import type { NextPage } from 'next'
 import { useTheme } from 'next-themes'
 import {useState, useEffect} from 'react'
 
-import {IoIosMoon, IoMdSunny} from 'react-icons/io'
+import {IoIosMoon, IoMdSunny} from 'react-icons/io';
+
+import Description from '../components/description';
+import {Biography} from '../components/biography';
+import Link from '../components/link';
 
 
 const Home: NextPage = () => {
@@ -31,62 +35,32 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 		</nav>
-		<main className="w-screen h-screen max-w-lg mx-auto overflow-hidden px-10 flex-1 flex flex-col items-center justify-center">
-			<div className="">
-				<h1 className="font-bold text-4xl">Under Construction</h1>
-			</div>
-			{/* <div className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-10">
-				<div className="text-left">
-					<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
-						About
-					</span>
-					<div className="w-15 sm:w-32 h-1 rounded bg-accent-2 dark:bg-main-accent">
-					</div>
-				</div>
-				<div className="col-span-2 break-words">
-					<p className="text-justify mb-3 indent-10 sm:indent-0">
-						Hello, I'm Jann Leo Gadil, a full-stack developer based
-						in Manila. I like creating scripts, programs, and
-						websites thats peaks the interests of users. as a
-						full-stack developer.
-					</p>
-					<p className="text-justify mb-3 indent-10 sm:indent-0">
-						I remember the first software i built, a voice
-						recognition program in C# like J.A.R.V.I.S from Iron
-						Man. it's feature is playing music, tell the
-						news, even search from voice. Now, I am able to create
-						all kinds of program, scripts, websites that helps clients, 
-						businesses, in their needs.
-					</p>
-				</div>
-			</div>
-			<div className=" grid sm:grid-cols-3 gap-2 grid-rows-2s">
-				<div className="text-left">
-					<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
-						Bio
-					</span>
-					<div className="w-15 sm:w-32 h-1 rounded bg-accent-2 dark:bg-main-accent">
-					</div>
-				</div>
-				<div className="col-span-2 break-words">
-					<p className="text-justify mb-3 indent-10 sm:indent-0">
-						Hello, I'm Jann Leo Gadil, a full-stack developer based
-						in Manila. I like creating scripts, programs, and
-						websites thats peaks the interests of users. as a
-						full-stack developer.
-					</p>
-					<p className="text-justify mb-3 indent-10 sm:indent-0">
-						I remember the first software i built, a voice
-						recognition program in C# like J.A.R.V.I.S from Iron
-						Man. it's feature is playing music, tell the
-						news, even search from voice.
-					</p>
-					<p className="text-justify indent-10 sm:indent-0">
-						Now, I am able to create all kinds of program, scripts,
-						websites that helps clients, businesses, in their needs.
-					</p>
-				</div>
+		<main className="w-screen max-w-lg mx-auto  flex-1 flex flex-col items-center justify-center">
+			{/* <div className="h-96 px-10">
 			</div> */}
+			<div className="px-10 w-full">
+				<div className="dark:bg-th-light-dark bg-th-light-light w-full rounded-md mb-10 px-4 py-3 flex sm:flex-row flex-col-reverse">
+					<div className="flex flex-row justify-center">
+						<div className="sm:mr-5 w-20 mt-5 sm:mt-0 bg-accent-2 dark:bg-main-accent rounded-full p-0.5">
+							<img className='w-20 h-auto m-auto rounded-full' src="/profilepic.jpg" alt="profile" />
+						</div>
+					</div>
+					<div className="flex-1 flex flex-col sm:text-right text-center justify-center">
+						<h1 className="text-2xl font-bold antialiased tracking-wider font-mplus leading-none">Jann Leo Gadil</h1>
+						<h2 className="text-2xl font-bold antialiased tracking-widest font-caveat leading-none text-accent-2 dark:text-main-accent">Full-stack Developer</h2>
+					</div>
+				</div>
+			</div>
+			<Description title="About" description={[
+				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",
+				"I remember the first software i built, a voice recognition program in C# like J.A.R.V.I.S from Iron Man. it's feature is playing music, tell the news, even search from voice. Now, I am able to create all kinds of program, scripts, websites that helps clients, businesses, in their needs."
+			]} />
+			<Biography title="Bio" description={[
+				['Born', 'August 29, 1997'],
+				['Lives in', 'Manila, Philippines'],
+				['Studied at', <Link link="https://www.facebook.com/St-Michael-Montessori-Integrated-School-230990113578947/" text="St. Michael Montesorri Integrated School"/>],
+				['Studying at', <Link link="https://www.sti.edu/" text="STI College Ortigas-Cainta" />],
+			]} />
 		</main>
         
     </div>
