@@ -10,7 +10,8 @@ module.exports = {
       'th-light-dark': '#242526',
       'th-light': '#EFE6DD',
       'accent-1': '#FD5D5D',
-      'accent-2': '#39AEA9',
+      'accent-2': '#845BB3',
+      'main-accent': '#D85C27'
     },
     extend: {
       fontFamily: {
