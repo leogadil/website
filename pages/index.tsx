@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   if(!mounted) return null
   return (
     <div className="w-screen h-screen flex flex-col">
-		<nav className="w-screen px-3" >
+		<nav className="w-screen px-3 fixed backdrop-filter backdrop-blur-2xl" >
 			<div className="p-4 max-w-3xl mx-auto flex flex-row justify-between">
 				<div className="flex flex-row items-center">
 					{/* <img src="/vercel.svg" className="h-12" /> */}
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 		</nav>
-		<main className="w-screen max-w-lg mx-auto  flex-1 flex flex-col items-center justify-center">
+		<main className="w-screen max-w-lg mx-auto mt-32 flex-1 flex flex-col items-center justify-center">
 			{/* <div className="h-96 px-10">
 			</div> */}
 			<div className="px-10 w-full">
@@ -55,11 +55,22 @@ const Home: NextPage = () => {
 				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",
 				"I remember the first software i built, a voice recognition program in C# like J.A.R.V.I.S from Iron Man. it's feature is playing music, tell the news, even search from voice. Now, I am able to create all kinds of program, scripts, websites that helps clients, businesses, in their needs."
 			]} />
+			<div className="px-10 w-full">
+				<div className="dark:bg-th-light-dark bg-th-light-light w-full rounded-md mb-10 px-4 py-3 flex sm:flex-row flex-col-reverse">
+					<div className="flex-1 flex flex-row justify-center">
+						<h1 className="opacity-50">I am pleased to meet you.</h1>
+					</div>
+					
+				</div>
+			</div>
 			<Biography title="Bio" description={[
 				['Born', 'August 29, 1997'],
 				['Lives in', 'Manila, Philippines'],
 				['Studied at', <Link link="https://www.facebook.com/St-Michael-Montessori-Integrated-School-230990113578947/" text="St. Michael Montesorri Integrated School"/>],
 				['Studying at', <Link link="https://www.sti.edu/" text="STI College Ortigas-Cainta" />],
+			]} />
+			<Description title="pastimes" description={[
+				"I like to watch movies, play games, and listen to music. I also like to make cinematics and make videos.",
 			]} />
 		</main>
         
