@@ -58,7 +58,7 @@ const Socials: React.FC<ISocialsProps> = ({delay}) => {
 
 type ISocialItemProps = {
     href: string,
-    Icon: React.ReactNode,
+    Icon: any,
     name?: string,
     islast?: boolean,
 }
