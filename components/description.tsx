@@ -16,12 +16,21 @@ const Description : React.FC<IProps> = ({title, description}) => {
 					</div>
 				</div>
 				<div className="col-span-2 break-words">
-					{description.map((desc, _) => {
-						return (
-							<p className="text-justify mb-3 indent-10 sm:indent-0">
-								{desc}
-							</p>
-						)
+					{description.map((desc, i) => {
+						if(i < description.length - 1) {
+							return (
+								<p className="text-justify mb-3 indent-10 sm:indent-0">
+									{desc}
+								</p>
+							)
+						} else {
+							return (
+								<p className="text-justify indent-10 sm:indent-0">
+									{desc}
+								</p>
+							)
+						}
+							
 					})}
 				</div>
 			</div>
