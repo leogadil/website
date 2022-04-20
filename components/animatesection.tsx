@@ -7,15 +7,27 @@ type IAnimateSectionProps = {
     className?: string
 }
 
+
+
 const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, className }) => {
+
+    const animateVariants = {
+        show: {
+            opacity: 1,
+            y: 0,
+        },
+        hide: {
+            opacity: 0,
+            y: -20,
+        }
+    }
+    
     return (
         <motion.div
+            variants={animateVariants}
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{
-                delay: delay,
-            }}
+            animate={"show"}
+            transition={{ delay: delay ? delay : 0 }}
             className={className}
         >
             {children}

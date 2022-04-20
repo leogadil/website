@@ -20,25 +20,33 @@ const BannerLayout : React.FC<IBannerLayoutProps> = ({ delay, children }) => {
     )
 }
 
-const Introduction : React.FC = () => {
+type IIntroductionProps = {
+    delay?: number
+}
+
+const Introduction : React.FC<IIntroductionProps> = ({delay}) => {
     return (
-        <BannerLayout delay={0}>
-            <div className="flex flex-row justify-center">
+        <BannerLayout delay={delay}>
+            <div className="flex flex-row justify-center pb-1">
                 <div className="sm:mr-5 w-20 mt-5 sm:mt-0 bg-accent-2 dark:bg-main-accent rounded-full p-0.5">
-                    <img className='w-20 h-auto m-auto rounded-full' src="/profilepic.jpg" alt="profile" />
+                    <img className='w-20 h-19 m-auto rounded-full' src="/profilepic.jpg" alt="profile" />
                 </div>
             </div>
             <div className="flex-1 flex flex-col sm:text-right text-center justify-center">
                 <h1 className="text-3xl font-bold antialiased tracking-wider font-mplus leading-none">Jann Leo Gadil</h1>
-                <h2 className="text-2xl font-bold antialiased tracking-widest font-caveat leading-[.01em] text-accent-2 dark:text-main-accent">A Full-stack Developer</h2>
+                <h2 className="text-2xl font-bold antialiased tracking-widest font-kaushan leading-[.01em] text-accent-2 dark:text-main-accent">Full-stack Developer</h2>
             </div>
         </BannerLayout>
     )
 }
 
-const Welcoming : React.FC = () => {
+type IWelcomingProps = {
+    delay?: number
+}
+
+const Welcoming : React.FC<IWelcomingProps> = ({delay}) => {
     return (
-        <BannerLayout delay={0.2}>
+        <BannerLayout delay={delay}>
             <div className="flex-1 flex flex-row justify-center">
                 <span className="dark:text-gray-1 text-gray-2">I am glad to see you here.</span>
             </div>

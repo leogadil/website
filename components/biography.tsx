@@ -19,7 +19,7 @@ const Biography : React.FC<IBioProps> = ({title, description, delay}) => {
 				<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
 					{title}
 				</span>
-				<div className="w-15 sm:w-32 h-1 rounded bg-accent-2 dark:bg-main-accent">
+				<div className="w-15 sm:w-32 h-1 mb-2 rounded bg-accent-2 dark:bg-main-accent">
 				</div>
 			</div>
 			<div className="col-span-2 grid grid-cols-2 gap-4">

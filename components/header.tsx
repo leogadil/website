@@ -42,7 +42,7 @@ const Header : React.FC = () => {
 						</li>
 					</ul>
 					<button 
-						className="bg-transparent bg-accent-2 dark:bg-main-accent p-2 rounded"  
+						className="bg-transparent bg-accent-2 dark:bg-main-accent p-2 rounded hover:bg-accent-2-light hover:dark:bg-main-accent-hover transition-colors"  
 						onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
 					>{theme === 'light' ? <IoIosMoon size="1.2em" className="text-th-light"/> : <IoMdSunny size="1.2em"/>}</button>
 				</div>
