@@ -20,8 +20,8 @@ const Introduction : React.FC = () => {
                 </div>
             </div>
             <div className="flex-1 flex flex-col sm:text-right text-center justify-center">
-                <h1 className="text-2xl font-bold antialiased tracking-wider font-mplus leading-none">Jann Leo Gadil</h1>
-                <h2 className="text-2xl font-bold antialiased tracking-widest font-caveat leading-none text-accent-2 dark:text-main-accent">Full-stack Developer</h2>
+                <h1 className="text-3xl font-bold antialiased tracking-wider font-mplus leading-none">Jann Leo Gadil</h1>
+                <h2 className="text-2xl font-bold antialiased tracking-widest font-caveat leading-[.01em] text-accent-2 dark:text-main-accent">A Full-stack Developer</h2>
             </div>
         </BannerLayout>
     )
@@ -31,7 +31,7 @@ const Welcoming : React.FC = () => {
     return (
         <BannerLayout>
             <div className="flex-1 flex flex-row justify-center">
-                <span className="text-gray-1">I am glad to see you here.</span>
+                <span className="dark:text-gray-1 text-gray-2">I am glad to see you here.</span>
             </div>
         </BannerLayout>
     )

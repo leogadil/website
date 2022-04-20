@@ -1,5 +1,10 @@
 module.exports = {
+  mode: 'jit',
   darkMode: 'class',
+  purge: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -13,7 +18,8 @@ module.exports = {
       'accent-1': '#FD5D5D',
       'accent-2': '#845BB3',
       'main-accent': '#D85C27',
-      'gray-1': '#808080',
+      'gray-1': '#a7a19b',
+      'gray-2': '#484542',
     },
     extend: {
       fontFamily: {
