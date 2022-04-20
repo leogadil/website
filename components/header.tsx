@@ -2,16 +2,13 @@ import React, {useState, useEffect} from 'react'
 import { useTheme } from 'next-themes'
 
 import {IoIosMoon, IoMdSunny} from 'react-icons/io';
-import router, {useRouter} from 'next/router';
+import {useRouter} from 'next/router';
+import Link from 'next/link'
 
 const Header : React.FC = () => {
 
     const {theme, setTheme} = useTheme()
 	const route = useRouter()
-
-	const switchPage= (_link : string) => {
-		router.push(_link, undefined, { shallow: true })
-	}
 
 	const [Sroute, setSroute] = useState(route.pathname)
 
@@ -25,21 +22,21 @@ const Header : React.FC = () => {
 				<div className="flex flex-row items-center">
 					{/* <img src="/vercel.svg" className="h-12" /> */}
 					{/* <div className="bg-white w-3 h-3 border-2 border-color rounded mr-2"></div> */}
-					<h1 className="text-2xl font-mplus font-bold" ><button onClick={() => switchPage('/')}>Leogadil</button></h1>
+					<h1 className="text-2xl font-mplus font-bold" ><Link href="/" scroll={false}>Leogadil</Link></h1>
 				</div>
 				<div className="flex flex-row items-center">
 					<ul className="flex mr-4">
 						<li className="flex-1 mr-3 cursor-pointer">
-							<button onClick={() => switchPage('/projects')}>
+							<Link href="/projects" scroll={false}>
 								Projects
-							</button>
+							</Link>
 							<div className={Sroute.toLowerCase().indexOf('/projects') != -1 ? 'w-full h-1 rounded bg-accent-2 dark:bg-main-accent' : ''}>
 							</div>
 						</li>
 						<li className="flex-1 cursor-pointer">
-							<button onClick={() => switchPage('/blogs')}>
+							<Link href="/blogs" scroll={false}>
 								Blogs
-							</button>
+							</Link>
 							<div className={Sroute.toLowerCase().indexOf('/blogs') != -1 ? 'w-full h-1 rounded bg-accent-2 dark:bg-main-accent' : ''}>
 							</div>
 						</li>

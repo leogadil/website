@@ -1,14 +1,20 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
+import AnimateSection from './animatesection'
 
 
 type IBioProps = {
 	title : string
 	description : Array<any>
+	delay?: number
 }
 
-const Biography : React.FC<IBioProps> = ({title, description}) => {
+const Biography : React.FC<IBioProps> = ({title, description, delay}) => {
     return (
-        <div className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-10 px-10">
+        <AnimateSection
+			delay={delay}
+			className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-10 px-10">
 			<div className="text-left">
 				<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
 					{title}
@@ -23,7 +29,7 @@ const Biography : React.FC<IBioProps> = ({title, description}) => {
 					)
 				})}
 			</div>
-		</div>
+		</AnimateSection>
     )
 }
 

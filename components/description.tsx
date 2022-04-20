@@ -1,13 +1,19 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
+import AnimateSection from './animatesection'
 
 type IProps = {
-	title : string
-	description : Array<string>
+	title: string
+	description: Array<string>
+	delay?: number
 }
 
-const Description : React.FC<IProps> = ({title, description}) => {
-    return (
-        <div className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-10 px-10 w-full">
+const Description: React.FC<IProps> = ({ title, description, delay }) => {
+	return (
+		<AnimateSection
+			delay={delay}
+			className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-10 px-10 w-full">
 			<div className="text-left">
 				<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
 					{title}
@@ -17,7 +23,7 @@ const Description : React.FC<IProps> = ({title, description}) => {
 			</div>
 			<div className="col-span-2 break-words">
 				{description.map((desc, i) => {
-					if(i < description.length - 1) {
+					if (i < description.length - 1) {
 						return (
 							<p className="text-justify mb-3 indent-10 sm:indent-10">
 								{desc}
@@ -30,11 +36,11 @@ const Description : React.FC<IProps> = ({title, description}) => {
 							</p>
 						)
 					}
-						
+
 				})}
 			</div>
-		</div>
-    )
+		</AnimateSection>
+	)
 }
 
 export default Description
