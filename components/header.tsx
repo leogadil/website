@@ -8,8 +8,8 @@ const Header : React.FC = () => {
     const {theme, setTheme} = useTheme()
 
     return (
-        <nav className="w-screen px-3 fixed backdrop-filter backdrop-blur-2xl" >
-			<div className="p-2 max-w-3xl mx-auto flex flex-row justify-between">
+        <nav className="w-full px-3 fixed backdrop-filter backdrop-blur-2xl " >
+			<div className="p-2 max-w-3xl mx-auto flex flex-row justify-between ">
 				<div className="flex flex-row items-center">
 					{/* <img src="/vercel.svg" className="h-12" /> */}
 					{/* <div className="bg-white w-3 h-3 border-2 border-color rounded mr-2"></div> */}

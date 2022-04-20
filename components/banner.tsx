@@ -31,7 +31,7 @@ const Welcoming : React.FC = () => {
     return (
         <BannerLayout>
             <div className="flex-1 flex flex-row justify-center">
-                <h1 className="opacity-50">I am pleased to meet you.</h1>
+                <span className="text-gray-1">I am glad to see you here.</span>
             </div>
         </BannerLayout>
     )

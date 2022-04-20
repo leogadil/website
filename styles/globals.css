@@ -10,3 +10,9 @@
         @apply bg-th-light dark:bg-th-dark transition-colors duration-200
     }
 }
+
+/* @layer base {
+    * {
+        @apply border-2
+    }
+} */

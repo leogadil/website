@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
 import Description from '../components/description';
@@ -15,6 +16,9 @@ const Home: NextPage = () => {
 	if (!mounted) return null
 	return (
 		<>
+			<Head>
+				<title>Home</title>
+			</Head>
 			<Introduction />
 			<Description title="About" description={[
 				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",
