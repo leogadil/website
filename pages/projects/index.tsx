@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import CenterTitle from '../../components/centertitle'
+import Footer from '../../components/footer'
 
 const Projects: NextPage = () => {
     return (
@@ -9,7 +10,8 @@ const Projects: NextPage = () => {
             <Head>
 				<title>Projects</title>
 			</Head>
-            <CenterTitle text="Projects" />
+            <CenterTitle text="Projects" delay={0.1} />
+            <Footer delay={0.2}/>
         </>
     )
 }

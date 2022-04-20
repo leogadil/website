@@ -28,14 +28,14 @@ const Header : React.FC = () => {
 					<ul className="flex mr-4">
 						<li className="flex-1 mr-3 cursor-pointer">
 							<Link href="/projects" scroll={false}>
-								Projects
+								<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors">Projects</button>
 							</Link>
 							<div className={Sroute.toLowerCase().indexOf('/projects') != -1 ? 'w-full h-1 rounded bg-accent-2 dark:bg-main-accent' : ''}>
 							</div>
 						</li>
 						<li className="flex-1 cursor-pointer">
 							<Link href="/blogs" scroll={false}>
-								Blogs
+							<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors">Blogs</button>
 							</Link>
 							<div className={Sroute.toLowerCase().indexOf('/blogs') != -1 ? 'w-full h-1 rounded bg-accent-2 dark:bg-main-accent' : ''}>
 							</div>

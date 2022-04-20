@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import {useRouter} from 'next/router';
 
 import Header from '../components/header'
-import Footer from '../components/footer'
+// import Footer from '../components/footer'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -16,12 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<ThemeProvider attribute='class'>
 				<div className="flex flex-col">
 					<Header />
-						<AnimatePresence exitBeforeEnter>
-							<div className="max-w-lg mx-auto mt-32 flex-1 flex flex-col items-center justify-center">
+						<div className="w-full max-w-lg mx-auto mt-32 flex-1 flex flex-col items-center justify-center">
+							<AnimatePresence exitBeforeEnter>
 								<Component {...pageProps} key={router.pathname}/>
-							</div>
-						</AnimatePresence>
-					<Footer />
+							</AnimatePresence>
+						</div>
 				</div>
 		</ThemeProvider>
 	)
