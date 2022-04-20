@@ -75,3 +75,4 @@ const SocialItem: React.FC<ISocialItemProps> = ({ Icon, href, name, islast }) =>
 }
 
 export { Socials, SocialItem }
+
