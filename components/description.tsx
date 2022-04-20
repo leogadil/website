@@ -7,9 +7,10 @@ type IProps = {
 	title: string
 	description: Array<string>
 	delay?: number
+	isindented?: boolean
 }
 
-const Description: React.FC<IProps> = ({ title, description, delay }) => {
+const Description: React.FC<IProps> = ({ title, description, delay, isindented }) => {
 	return (
 		<AnimateSection
 			delay={delay}
@@ -25,13 +26,13 @@ const Description: React.FC<IProps> = ({ title, description, delay }) => {
 				{description.map((desc, i) => {
 					if (i < description.length - 1) {
 						return (
-							<p className="text-justify mb-3 indent-10 sm:indent-10">
+							<p className={"text-justify mb-3 " + (isindented && "indent-10 sm:indent-10")}>
 								{desc}
 							</p>
 						)
 					} else {
 						return (
-							<p className="text-justify indent-10 sm:indent-10">
+							<p className={"text-justify" + (isindented && "indent-10 sm:indent-10")}>
 								{desc}
 							</p>
 						)

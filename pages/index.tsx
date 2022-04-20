@@ -6,6 +6,7 @@ import Description from '../components/description';
 import { Biography } from '../components/biography';
 import Link from '../components/link';
 import { Introduction, Welcoming } from '../components/banner';
+import ButtonLink from '../components/buttonlink';
 
 const Home: NextPage = () => {
 	const [mounted, setMounted] = useState(false)
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
 				<title>Home</title>
 			</Head>
 			<Introduction />
-			<Description title="About" delay={0.1} description={[
+			<Description title="About" delay={0.1} isindented description={[
 				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",
 				"I remember the first software i built, a voice recognition program in C# like J.A.R.V.I.S from Iron Man. it's feature is playing music, tell the news, even search from voice. Now, I am able to create all kinds of program, scripts, websites that helps clients, businesses, in their needs."
 			]} />
@@ -32,6 +33,7 @@ const Home: NextPage = () => {
 			<Description title="pastimes" delay={0.4} description={[
 				"I like to watch movies, play games, and listen to music. I also like to make cinematics and make videos.",
 			]} />
+			<ButtonLink text="See my projects" url="/projects" />
 		</>
 	)
 }
