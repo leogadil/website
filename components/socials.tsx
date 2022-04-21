@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import AnimateSection from './animatesection'
 
-import { SiYoutube, SiTwitter, SiFacebook } from 'react-icons/si';
+import { SiYoutube, SiTwitter, SiFacebook, SiGithub } from 'react-icons/si';
 
 type ISocialsProps = {
     delay: number,
@@ -25,6 +25,11 @@ const Socials: React.FC<ISocialsProps> = ({delay}) => {
             "icon": SiFacebook,
             "href": "https://www.facebook.com/themightyguyoftheworld",
             "name": "@themightyguyoftheworld"
+        },
+        {
+            "icon": SiGithub,
+            "href": "https://www.facebook.com/themightyguyoftheworld",
+            "name": "@leogadil"
         }
     ]
 
@@ -67,7 +72,7 @@ const SocialItem: React.FC<ISocialItemProps> = ({ Icon, href, name, islast }) =>
     return (
         <Link href={href}>
             <button key={name} className={"dark:hover:bg-main-accent-half hover:bg-accent-2-half p-1 px-4 pl-4 pb-[.5em] rounded flex flex-row items-center w-max transition-colors " + (!islast && ' mb-2')}>
-                <Icon size="1em" className="dark:text-special-1 text-special-2 mt-1" />
+                <Icon size="1em" className="dark:text-special-1 text-special-2 mt-[1px]" />
                 <h1 className="dark:text-special-1 text-special-2 font-mplus font-bold ml-3">{name}</h1>
             </button>
         </Link>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kaushan+Script&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kaushan+Script&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 @tailwind base;
@@ -8,15 +8,25 @@
 @layer base {
     body {
         @apply bg-th-light dark:bg-th-dark transition-colors duration-200
+
+    }
+
+    * {
+        @apply font-roboto
+
     }
 }
 
-*{
+body {
+    overflow-y: overlay;
+}
+
+/* *{
     -ms-overflow-style: none;
 }
 *::-webkit-scrollbar {
     display: none;
-}
+} */
 
 /* @layer base {
     * {

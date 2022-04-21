@@ -20,7 +20,7 @@ const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, clas
             opacity: 0,
             y: 20,
             transition: {
-                duration: 0.5,
+                duration: 0.2,
                 delay: delay
             }
         }
@@ -32,7 +32,7 @@ const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, clas
             initial={{ opacity: 0, y: -20 }}
             animate={"show"}
             exit={"hide"}
-            transition={{ delay: delay ? delay : 0 }}
+            transition={{ delay: delay ? delay - 0.05 : 0 }}
             className={className}
         >
             {children}

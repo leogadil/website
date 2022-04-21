@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter()
 
 	return (
-		<ThemeProvider attribute='class'>
+		<ThemeProvider attribute='class' enableColorScheme>
 				<div className="flex flex-col">
 					<Header />
 						<div className="w-full max-w-lg mx-auto mt-32 flex-1 flex flex-col items-center justify-center">

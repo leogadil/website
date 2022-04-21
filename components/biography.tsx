@@ -42,7 +42,7 @@ const BioCol : React.FC<IBioColProps> = ({year, description}) => {
     return (
         <>
             <h1 className="font-bold ">{year}</h1>
-            <h1 className="opacity-75">{description}</h1>
+            <h1 className="font-gray-1">{description}</h1>
         </>
     )
 }

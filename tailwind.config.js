@@ -32,6 +32,7 @@ module.exports = {
         'mplus': ['"M PLUS Rounded 1c"', "sans-serif"],
         'caveat': ['"Caveat"', "cursive"],
         'kaushan': ['"Kaushan Script"', "cursive"],
+        'roboto': ['"Roboto"', "sans-serif"],
        },
     },
   },
