@@ -17,7 +17,7 @@ const Header : React.FC = () => {
 	}, [route.pathname])
 
     return (
-        <nav className="w-full px-3 fixed backdrop-filter backdrop-blur-2xl " >
+        <nav className="w-full px-3 fixed backdrop-filter backdrop-blur-2xl z-10" >
 			<div className="p-2 max-w-3xl mx-auto flex flex-row justify-between ">
 				<div className="flex flex-row items-center">
 					{/* <img src="/vercel.svg" className="h-12" /> */}

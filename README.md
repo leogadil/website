@@ -16,7 +16,9 @@ The site is hosted on vercel [leogadil.now.sh](https://leogadil.now.sh/).
 $PROJECT_ROOT
 ├── pages # Page files
 │
-├── components # React component files  
+├── components # React component files
+│
+├── lib # Non-React component files  
 │   
 └── public # Static files for images and 3d model file
 ```

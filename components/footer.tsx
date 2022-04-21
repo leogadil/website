@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import AnimateSection from './animatesection'
 import Link from './link'

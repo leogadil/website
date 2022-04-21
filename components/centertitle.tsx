@@ -11,6 +11,7 @@ const CenterTitle: React.FC<ICenterTitleProps> = ({ text, delay }) => {
     return (
         <AnimateSection 
             delay={delay}
+            className="mb-10"
         >
             <h1 className="text-2xl font-bold font-mplus">{text}</h1>
         </AnimateSection>

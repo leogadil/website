@@ -1,5 +1,4 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useEffect } from 'react'
 
 import AnimateSection from './animatesection'
 
@@ -11,6 +10,7 @@ type IProps = {
 }
 
 const Description: React.FC<IProps> = ({ title, description, delay, isindented }) => {
+
 	return (
 		<AnimateSection
 			delay={delay}

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import AnimateSection from './animatesection'
+import DelayContext from '../lib/delay'
 
 
 type IBioProps = {
@@ -11,6 +12,7 @@ type IBioProps = {
 }
 
 const Biography : React.FC<IBioProps> = ({title, description, delay}) => {
+
     return (
         <AnimateSection
 			delay={delay}

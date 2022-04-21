@@ -4,24 +4,27 @@ import { motion } from 'framer-motion'
 type IAnimateSectionProps = {
     delay?: number,
     children?: React.ReactNode
-    className?: string
+    className?: string,
+    whileHover?: any
 }
 
-
-
-const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, className }) => {
+const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, className, whileHover }) => {
 
     const animateVariants = {
         show: {
             opacity: 1,
             y: 0,
+            transition: {
+                duration: 0.2,
+                delay: delay ? delay - 0.05 : 0
+            }
         },
         hide: {
             opacity: 0,
             y: 20,
             transition: {
                 duration: 0.2,
-                delay: delay
+                delay: delay ? delay - 0.05 : 0
             }
         }
     }
@@ -32,8 +35,8 @@ const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, clas
             initial={{ opacity: 0, y: -20 }}
             animate={"show"}
             exit={"hide"}
-            transition={{ delay: delay ? delay - 0.05 : 0 }}
             className={className}
+            whileHover={whileHover}
         >
             {children}
         </motion.div>

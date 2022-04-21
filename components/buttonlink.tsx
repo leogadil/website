@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 
 import AnimateSection from './animatesection'
@@ -12,6 +12,7 @@ type IButtonLinkProps = {
 }
 
 const ButtonLink : React.FC<IButtonLinkProps> = ({ text, url, delay }) => {
+
     return (
         <AnimateSection delay={delay}>
             <Link href={url} scroll={false}>

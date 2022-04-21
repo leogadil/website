@@ -10,7 +10,7 @@ import ButtonLink from '../components/buttonlink';
 import { Socials } from '../components/socials';
 import Footer from '../components/footer';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
 	const [mounted, setMounted] = useState(false)
 
 	useEffect(() => setMounted(true), [])
@@ -43,4 +43,4 @@ const Home: NextPage = () => {
 	)
 }
 
-export default Home
+export default HomePage
