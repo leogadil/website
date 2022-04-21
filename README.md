@@ -1,23 +1,31 @@
-# Next.js + Tailwind CSS Example
+# My Portfolio Website
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+The site is hosted on vercel [leogadil.now.sh](https://leogadil.now.sh/).
 
-## Deploy your own
+## Tech Stack
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+1. [Next.js](https://nextjs.org/) - A server-side framework for building blazing fast, performant React applications.
+2. [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom, high performance websites.
+3. [Framer Motion](https://framer.com/motion/) - A library for building interactive animations in React. 
 
-## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Project Structure
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
+```
+$PROJECT_ROOT
+├── pages # Page files
+│
+├── components # React component files  
+│   
+└── public # Static files for images and 3d model file
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## License
+MIT License
+
+You can use this project under the terms of the MIT License. If you do fork this project, notify me. I want to see your work.
+
+## Inspiration
+
+The design inspiration of this project comes from [Devaslife](https://www.youtube.com/devaslife) homepage [craftz.dog](https://craftz.dog/).
