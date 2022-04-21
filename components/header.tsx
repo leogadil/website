@@ -30,14 +30,14 @@ const Header : React.FC = () => {
 							<Link href="/projects" scroll={false}>
 								<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors">Projects</button>
 							</Link>
-							<div className={Sroute.toLowerCase().indexOf('/projects') != -1 ? 'w-full h-1 rounded bg-accent-2 dark:bg-main-accent' : ''}>
+							<div className={"w-full h-1 rounded bg-transparent dark:bg-transparent transition-colors " + (Sroute.toLowerCase().indexOf('/projects') != -1 ? 'bg-accent-2 dark:bg-main-accent' : '')}>
 							</div>
 						</li>
 						<li className="flex-1 cursor-pointer">
 							<Link href="/blogs" scroll={false}>
 							<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors">Blogs</button>
 							</Link>
-							<div className={Sroute.toLowerCase().indexOf('/blogs') != -1 ? 'w-full h-1 rounded bg-accent-2 dark:bg-main-accent' : ''}>
+							<div className={"w-full h-1 rounded bg-transparent dark:bg-transparent transition-colors " + (Sroute.toLowerCase().indexOf('/blogs') != -1 ? 'bg-accent-2 dark:bg-main-accent' : '')}>
 							</div>
 						</li>
 					</ul>
