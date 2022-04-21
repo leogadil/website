@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import AnimateSection from './animatesection'
-import DelayContext from '../lib/delay'
 
 
 type IBioProps = {
