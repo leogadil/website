@@ -20,8 +20,8 @@ const HomePage: NextPage = () => {
 			<HeadMeta title="Homepage"/>
 			<Introduction delay={0.1}/>
 			<Description title="About" delay={0.2} isindented description={[
-				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",
-				"I remember the first software i built, a voice recognition program in C# like J.A.R.V.I.S from Iron Man. it's feature is playing music, tell the news, even search from voice. Now, I am able to create all kinds of program, scripts, websites that helps clients, businesses, in their needs."
+				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites that peaks the interests of users. as a full-stack developer.",
+				"I remember the first software i built, a voice recognition program in C# like J.A.R.V.I.S from Iron Man. It's feature include playing music, telling the news, and even searching with your voice. Now, I am able to create all kinds of programs, scripts, websites that help clients, businesses, in their needs."
 			]} />
 			<ButtonLink text="Read my Blogs" url="/blogs" delay={0.3} />
 			<Welcoming delay={0.4}/>
