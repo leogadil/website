@@ -11,7 +11,7 @@ const BannerLayout : React.FC<IBannerLayoutProps> = ({ delay, children }) => {
     return (
         <AnimateSection
             delay={delay}
-            className="px-10 w-full"
+            className="px-8 w-full"
             whileHover={{ scale: 1.05 }}>
             <div className="dark:bg-th-light-dark bg-th-light-light w-full rounded-md mb-10 px-4 py-3 flex sm:flex-row flex-col-reverse duration-600 ease-in-out cursor-pointer">
                 {children}

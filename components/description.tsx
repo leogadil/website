@@ -14,7 +14,7 @@ const Description: React.FC<IProps> = ({ title, description, delay, isindented }
 	return (
 		<AnimateSection
 			delay={delay}
-			className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-5 px-10 w-full">
+			className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-5 px-8 w-full">
 			<div className="text-left">
 				<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
 					{title}

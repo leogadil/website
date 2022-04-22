@@ -15,7 +15,7 @@ type IProjectsProps = {
 const Projects: React.FC<IProjectsProps> = ({ delay, projects }) => {
 
     return (
-        <div className="grid sm:grid-cols-2 gap-6 mb-10 grid-cols-1 mx-10">
+        <div className="grid sm:grid-cols-2 gap-6 mb-10 grid-cols-1 px-8">
             {projects && projects.length != 0 ? projects.map((project, index) => {
                 return (
                     <ProjectContainer key={index} delay={delay + (index * 0.1)} imglink={project.imglink} title={project.title} description={project.description} />
