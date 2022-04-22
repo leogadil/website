@@ -15,7 +15,7 @@ type IProjectsProps = {
 const Projects: React.FC<IProjectsProps> = ({ delay, projects }) => {
 
     return (
-        <div className="grid grid-cols-2 gap-6 mb-10">
+        <div className="grid sm:grid-cols-2 gap-6 mb-10 grid-cols-1">
             {projects && projects.length != 0 ? projects.map((project, index) => {
                 return (
                     <ProjectContainer key={index} delay={delay + (index * 0.1)} imglink={project.imglink} title={project.title} description={project.description} />
@@ -50,7 +50,7 @@ const ProjectContainer : React.FC<IProjectProps> = ({imglink, title, description
     return (
         <AnimateSection whileHover={{ scale: 1.05 }} key={key} delay={delay} className="w-full h-26 cursor-pointer flex flex-col items-center">
             <div className="h-26 w-full mb-2">
-                <Image className="h-[130px] w-full" imglink={imglink} title={title} description={description} />
+                <Image className="sm:h-[130px] w-full" imglink={imglink} title={title} description={description} />
             </div>
             <h1 className="font-mplus font-bold">{title}</h1>
             <span className="text-sm text-center text-gray-1">{description}</span>

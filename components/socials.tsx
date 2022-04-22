@@ -38,8 +38,8 @@ const Socials: React.FC<ISocialsProps> = ({delay}) => {
             delay={delay} 
             className="grid sm:grid-cols-3 gap-2 grid-rows-2s mb-5 px-10 w-full">
             <div className="text-left">
-				<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-widest">
-					Socials
+				<span className="font-black text-lg sm:text-xl font-mplus dark:text-main-accent text-accent-2 tracking-wider">
+					On the Web
 				</span>
 				<div className="w-10 sm:w-32 mb-2 h-1 rounded bg-accent-2 dark:bg-main-accent">
 				</div>
@@ -71,7 +71,7 @@ type ISocialItemProps = {
 const SocialItem: React.FC<ISocialItemProps> = ({ Icon, href, name, islast }) => {
     return (
         <Link href={href}>
-            <button key={name} className={"dark:hover:bg-main-accent-half hover:bg-accent-2-half p-1 px-4 pl-4 pb-[.5em] rounded flex flex-row items-center w-max transition-colors " + (!islast && ' mb-2')}>
+            <button key={name} className={"dark:hover:bg-main-accent-half hover:bg-accent-2-half p-1 px-4 pl-4 pb-[.5em] rounded flex flex-row items-center w-max transition-colors " + (!islast && ' mb-1')}>
                 <Icon size="1em" className="dark:text-special-1 text-special-2 mt-[1px]" />
                 <h1 className="dark:text-special-1 text-special-2 font-mplus font-bold ml-3">{name}</h1>
             </button>

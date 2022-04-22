@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
 import Description from '../components/description';
@@ -9,6 +8,7 @@ import { Introduction, Welcoming } from '../components/banner';
 import ButtonLink from '../components/buttonlink';
 import { Socials } from '../components/socials';
 import Footer from '../components/footer';
+import HeadMeta from '../components/head';
 
 const HomePage: NextPage = () => {
 	const [mounted, setMounted] = useState(false)
@@ -17,9 +17,7 @@ const HomePage: NextPage = () => {
 	if (!mounted) return null
 	return (
 		<>
-			<Head>
-				<title>Home</title>
-			</Head>
+			<HeadMeta title="Home" description="Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer."/>
 			<Introduction delay={0.1}/>
 			<Description title="About" delay={0.2} isindented description={[
 				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",

@@ -17,7 +17,7 @@ const ProjectsPage: NextPage = () => {
         {
             imglink: "/samantha.jpg",
             title: "Samantha",
-            description: "is a natural language AI application."
+            description: "is a natural language intelligent digital assistant."
         },
         {
             imglink: "/atlas.jpg",
