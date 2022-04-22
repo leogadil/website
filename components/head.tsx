@@ -11,7 +11,7 @@ type IHeadProps = {
 const HeadMeta : React.FC<IHeadProps> = ({ title, description, image, url }) => {
     return (
         <Head>
-            <title>{"Leogadil's " + title}</title>
+            <title>{"Leogadil Portfolio - " + title}</title>
             <meta 
                 name="description" 
                 content={description ? description : "I'm a software engineer and a web developer."}
@@ -24,9 +24,9 @@ const HeadMeta : React.FC<IHeadProps> = ({ title, description, image, url }) => 
             <meta name="copyright" content="Jann Leo Gadil" />
             <meta name="robots" content="follow"/>
             <meta property="og:image"  content="/preview.svg" />
-            <meta name="twitter:card" content="summary"></meta>
+            <meta name="twitter:card" content="summary_large_image"></meta>
             <meta property="og:image"  content="/preview.svg" />
-            <meta property="og:title"  content={"Leogadil " + title} />
+            <meta property="og:title"  content={"Leogadil Portfolio - " + title} />
             <meta property="og:description"  content={description ? description : "I'm a software engineer and a web developer."} />
             <meta property="og:url"  content={url ? url : "https://leogadil.now.sh"} />
         </Head>
