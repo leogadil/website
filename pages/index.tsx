@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
 	if (!mounted) return null
 	return (
 		<>
-			<HeadMeta title="Home" description="Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer."/>
+			<HeadMeta title="Homepage"/>
 			<Introduction delay={0.1}/>
 			<Description title="About" delay={0.2} isindented description={[
 				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites thats peaks the interests of users. as a full-stack developer.",
