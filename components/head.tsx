@@ -28,7 +28,7 @@ const HeadMeta : React.FC<IHeadProps> = ({ title, description, image, url }) => 
             <meta property="og:image"  content="/preview.svg" />
             <meta property="og:title"  content={"Leogadil Portfolio - " + title} />
             <meta property="og:description"  content={description ? description : "I'm a software engineer and a web developer."} />
-            <meta property="og:url"  content={url ? url : "https://leogadil.now.sh"} />
+            <meta property="og:url"  content={url ? url : "https://leogadil.com"} />
         </Head>
     )
 }
