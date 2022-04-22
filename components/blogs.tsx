@@ -15,7 +15,7 @@ type IBlogsProps = {
 const Blogs: React.FC<IBlogsProps> = ({ delay, blogs }) => {
 
     return (
-        <div className="grid sm:grid-cols-2 gap-6 mb-10 grid-cols-1">
+        <div className="grid sm:grid-cols-2 gap-6 mb-10 grid-cols-1 mx-10">
             {blogs && blogs.length != 0 ? blogs.map((blog, index) => {
                 return (
                     <BlogsContainer key={index} delay={delay + (index * 0.1)} imglink={blog.imglink} title={blog.title} description={blog.description} />
