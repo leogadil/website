@@ -33,7 +33,7 @@ const Header : React.FC = () => {
 							<div className={"w-full h-1 rounded bg-transparent dark:bg-transparent transition-colors " + (Sroute.toLowerCase().indexOf('/projects') != -1 ? 'bg-accent-2 dark:bg-main-accent' : '')}>
 							</div>
 						</li>
-						<li className="flex-1 cursor-pointer">
+						<li className="flex-cursor-pointer">
 							<Link href="/blogs" scroll={false}>
 							<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors">Blogs</button>
 							</Link>

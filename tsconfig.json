@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/notifContext.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/notifContext.js", "components/landing3d.js"],
   "exclude": ["node_modules"]
 }
