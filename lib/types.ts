@@ -63,7 +63,7 @@ export type IAnimateSectionProps = {
     className?: string,
     whileHover?: any,
     whileTap?: any,
-    key?: string,
+    key?: string | number,
 }
 
 export type IBannerLayoutProps = {
@@ -108,7 +108,7 @@ export type IBlogProps = {
     imglink: string,
     title?: string,
     description?: string
-    key: number,
+    key: string | number,
     delay?: number
 }
 
