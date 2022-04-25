@@ -2,17 +2,16 @@ import React, { useEffect } from 'react'
 
 import AnimateSection from './animatesection'
 
-type IBannerLayoutProps = {
-    delay?: number
-    children?: React.ReactNode
-}
+import { IBannerLayoutProps, IIntroductionProps, IWelcomingProps } from '../lib/types'
+
 
 const BannerLayout : React.FC<IBannerLayoutProps> = ({ delay, children }) => {
     return (
         <AnimateSection
             delay={delay}
             className="px-8 w-full"
-            whileHover={{ scale: 1.05 }}>
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}>
             <div className="dark:bg-th-light-dark bg-th-light-light w-full rounded-md mb-10 px-4 py-3 flex sm:flex-row flex-col-reverse duration-600 ease-in-out cursor-pointer">
                 {children}
             </div>
@@ -20,9 +19,7 @@ const BannerLayout : React.FC<IBannerLayoutProps> = ({ delay, children }) => {
     )
 }
 
-type IIntroductionProps = {
-    delay?: number
-}
+
 
 const Introduction : React.FC<IIntroductionProps> = ({delay}) => {
 
@@ -41,9 +38,6 @@ const Introduction : React.FC<IIntroductionProps> = ({delay}) => {
     )
 }
 
-type IWelcomingProps = {
-    delay?: number
-}
 
 const Welcoming : React.FC<IWelcomingProps> = ({delay}) => {
 

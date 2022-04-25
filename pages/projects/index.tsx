@@ -1,32 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import axios from 'axios'
 
 import CenterTitle from '../../components/centertitle'
 import Footer from '../../components/footer'
 import Projects from "../../components/projects"
+import { IProjectsProps, APIData } from '../../lib/types'
 
-const ProjectsPage: NextPage = () => {
-
-    // find a better way to implement delays on every components dynamically
-
-    const projects : Array<{
-            imglink: string,
-            title: string,
-            description: string
-        }> = [
-        {
-            imglink: "/samantha.jpg",
-            title: "Samantha",
-            description: "is a natural language intelligent digital assistant."
-        },
-        {
-            imglink: "/atlas.jpg",
-            title: "Atlas",
-            description: "is a restaurant chatbot. You can ask questions about the restaurant."
-        }
-    ]
-
-    console.log(projects.length)
+const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
 
     return (
         <>
@@ -34,10 +15,30 @@ const ProjectsPage: NextPage = () => {
 				<title>Projects</title>
 			</Head>
             <CenterTitle text="Projects" delay={0.1} />
-            <Projects delay={0.2} projects={projects}/>
-            <Footer delay={projects.length != 0 ? (projects.length * 0.1) + 0.2 : 0.3}/>
+            <Projects delay={0.2} projects={projects} />
+            <Footer delay={projects && projects.length != 0 ? (projects.length * 0.1) + 0.2 : 0.3}/>
         </>
     )
+}
+
+
+export async function getServerSideProps() {
+
+    const cdn = "https://cdn.jsdelivr.net/gh/leogadil/website-cdn@master/projects.json"
+
+    const projectsData = axios({
+        method: 'get',
+        url: cdn,
+        responseType: 'json'
+    })
+    
+    const [ projects ] = await Promise.all([projectsData])
+
+    return {
+        props: {
+            projects: projects.data.project
+        }
+    };
 }
 
 export default ProjectsPage

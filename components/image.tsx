@@ -1,13 +1,8 @@
 import React from 'react'
 
-type IImageProps = {
-    imglink: string,
-    title?: string,
-    description?: string,
-    className?: string
-}
+import { IImageProps } from '../lib/types'
 
-const Image: React.FC<IImageProps> = ({imglink, title, description, className }) => {
+const Image: React.FC<IImageProps> = ({imglink, title, className }) => {
 
     const [isError, setIsError] = React.useState(false)
 

@@ -1,13 +1,10 @@
 import React from 'react'
 
-type ILink = {
-    link?: string,
-    text: string
-}
+import { ILinkProps } from '../lib/types'
 
-const Link : React.FC<ILink> = ({link, text}) => {
+const Link : React.FC<ILinkProps> = ({link, text, className}) => {
     return (
-        <a href={link ? link : ""} target="_blank" className="font-bold hover:underline dark:text-main-accent text-accent-2 break-words">{text}</a>
+        <a href={link ? link : ""} target="_blank" className={"font-bold hover:underline dark:text-main-accent text-accent-2 break-words " + className}>{text}</a>
     )
 }
 

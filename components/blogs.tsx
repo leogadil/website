@@ -3,14 +3,7 @@ import React from 'react'
 import Image from './image'
 import AnimateSection from './animatesection'
 
-type IBlogsProps = {
-    delay: number,
-    blogs?: Array<{
-        imglink: string,
-        title: string,
-        description: string
-    }>
-}
+import { IBlogsProps, IBlogsLayoutProps, IBlogProps } from '../lib/types'
 
 const Blogs: React.FC<IBlogsProps> = ({ delay, blogs }) => {
 
@@ -25,25 +18,12 @@ const Blogs: React.FC<IBlogsProps> = ({ delay, blogs }) => {
     )
 }
 
-type IBlogsLayoutProps = {
-    children: React.ReactNode
-    delay?: number
-}
-
 const BlogsLayout: React.FC<IBlogsLayoutProps> = ({ children, delay }) => {
     return (
         <AnimateSection className="flex flex-col justify-center items-center" delay={delay}>
             {children}
         </AnimateSection>
     )
-}
-
-type IBlogProps = {
-    imglink: string,
-    title?: string,
-    description?: string
-    key: number,
-    delay?: number
 }
 
 const BlogsContainer : React.FC<IBlogProps> = ({imglink, title, description, key, delay }) => {

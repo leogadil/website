@@ -3,12 +3,8 @@ import { motion } from 'framer-motion'
 
 import AnimateSection from './animatesection'
 
+import { IBioProps, IBioColProps } from '../lib/types'
 
-type IBioProps = {
-	title : string
-	description : Array<any>
-	delay?: number
-}
 
 const Biography : React.FC<IBioProps> = ({title, description, delay}) => {
 
@@ -32,11 +28,6 @@ const Biography : React.FC<IBioProps> = ({title, description, delay}) => {
 			</div>
 		</AnimateSection>
     )
-}
-
-type IBioColProps = {
-	year : string
-	description : string
 }
 
 const BioCol : React.FC<IBioColProps> = ({year, description}) => {

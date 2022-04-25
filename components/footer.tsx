@@ -3,9 +3,7 @@ import React, { useEffect } from 'react'
 import AnimateSection from './animatesection'
 import Link from './link'
 
-type IFooterProps = {
-    delay: number
-}
+import { IFooterProps } from '../lib/types'
 
 const Footer : React.FC<IFooterProps> = ({ delay }) => {
 

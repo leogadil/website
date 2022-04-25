@@ -4,9 +4,7 @@ import AnimateSection from './animatesection'
 
 import { SiYoutube, SiTwitter, SiFacebook, SiGithub } from 'react-icons/si';
 
-type ISocialsProps = {
-    delay: number,
-}
+import { ISocialsProps, ISocialItemProps } from '../lib/types'
 
 const Socials: React.FC<ISocialsProps> = ({delay}) => {
 
@@ -61,12 +59,6 @@ const Socials: React.FC<ISocialsProps> = ({delay}) => {
     )
 }
 
-type ISocialItemProps = {
-    href: string,
-    Icon: any,
-    name?: string,
-    islast?: boolean,
-}
 
 const SocialItem: React.FC<ISocialItemProps> = ({ Icon, href, name, islast }) => {
     return (
