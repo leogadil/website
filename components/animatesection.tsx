@@ -25,7 +25,7 @@ const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, clas
     
     return (
         <motion.div
-            key={key}
+            key={key ? key : `delay${delay}-animate-section`}
             variants={animateVariants}
             initial={{ opacity: 0, y: -20 }}
             animate={"show"}

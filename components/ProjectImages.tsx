@@ -27,7 +27,7 @@ const ProjectImage : React.FC<IProjectImageItemProps> = ({ src, delay, key }) =>
                 className='w-full overflow-hidden mb-5 cursor-pointer' 
                 delay={delay}
                 whileHover={{ scale: 1.02 }}>
-                <Image className="w-full h-[250px] sm:h-auto object-contain" imglink={'/api/assets/' + src} title={"img"} />
+                <Image className="h-[250px] object-cover sm:h-auto" imglink={'/api/assets/' + src} title={"img"} />
             </AnimateSection>
         </>
     )

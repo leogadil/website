@@ -12,13 +12,28 @@
     }
 
     * {
-        @apply font-roboto
-
+        /* @apply font-roboto */
+        @apply focus:select-none focus:outline-none
+        
     }
 }
 
 body {
     overflow-y: overlay;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none !important;
 }
 
 /* *{
