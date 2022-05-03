@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimateSection from '../components/animatesection'
+import Footer from '../components/footer'
 import HeadMeta from '../components/head'
 import { I_404Props } from '../lib/types'
 
@@ -10,8 +11,10 @@ const _404 : React.FC<I_404Props> = ({ reason }) => {
       <AnimateSection>
 
         <h1>404</h1>
-        { reason ? reason : "cant find this page" }
+        <p>{ reason ? reason : "cant find this page" }</p>
+        
       </AnimateSection>
+      <Footer delay={0.2} />
     </>
   )
 }
