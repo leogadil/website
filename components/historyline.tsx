@@ -32,7 +32,7 @@ const History: React.FC<IHistoryProps> = ({ title, url, end }) => {
         <>
             <div className='flex flex-row justify-center items-center'>
                 {!end ?
-                    <Link href={url}>
+                    <Link href={url} scroll={false}>
                         <span className='cursor-pointer hover:underline hover:opacity-100 dark:text-main-accent text-accent-2 break-words opacity-50 transition-all'>{title}</span>
                     </Link> :
                     <span className='break-words opacity-50 hover:opacity-100 cursor-default'>{title}</span>
