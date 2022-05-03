@@ -42,8 +42,8 @@ const Header : React.FC = () => {
 							</div>
 						</li>
 						<li className="flex-1 cursor-pointer text-lg">
-							<Link passHref href="/" scroll={false}>
-								<a href="https://github.com/leogadil/website" target="_blank" rel="noopener noreferrer">
+							<Link passHref href="https://github.com/leogadil/website" scroll={false}>
+								<a target="_blank" rel="noopener noreferrer">
 									<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors flex flex-row items-center ">
 										<DiGithubBadge className='' />
 										Source
