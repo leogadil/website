@@ -4,7 +4,6 @@ import { IImageProps } from '../lib/types'
 
 const ImageLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
-    console.log(`https://cdn.jsdelivr.net/gh/leogadil/website-cdn/assets/${srcnew}`)
     return `https://cdn.jsdelivr.net/gh/leogadil/website-cdn/assets/${srcnew}`
 }
 
