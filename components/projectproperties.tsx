@@ -22,7 +22,7 @@ const PropertyItem : React.FC<Property> = ({ title, value, key, delay }) => {
     return (
         <AnimateSection className=" w-full px-8 mb-5 grid grid-cols-4" key={key} delay={delay}>
             <div className="text-special-1 text-sm font-mplus font-bold">{title}</div>
-            <div className="text-gray-1 text-sm col-span-3">{value}</div>
+            <div className="dark:text-gray-1 text-gray-2 text-sm col-span-3">{value}</div>
         </AnimateSection>
     )
 }

@@ -13,10 +13,22 @@ export type IProjectImagesProps = {
     delay?: number
 }
 
+export type IProjectVideosProps = {
+    videos: Url[]
+    delay?: number
+}
+
 export type IProjectImageItemProps = {
     src: string
     delay?: number
     key: string
+}
+
+export type IProjectVideoItemProps = {
+    title: string
+    url: string
+    delay?: number
+    key: string | number
 }
 
 export type IHistoryLineProps = {
@@ -28,6 +40,7 @@ export type IHistoryProps = {
     title: string
     url: string
     end?: boolean
+    key?: string | number
 }
 
 export type Property = {
@@ -40,7 +53,7 @@ export type Property = {
 export type Url = {
     url: string
     title: string
-    key: any
+    key?: any
     delay?: number
 }
 

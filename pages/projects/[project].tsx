@@ -9,6 +9,7 @@ import ProjectDescription from '../../components/projectdescription'
 import ProjectProperties from '../../components/projectproperties'
 import ProjectLinks from '../../components/projectlinks'
 import ProjectImages from '../../components/ProjectImages'
+import ProjectVideos from '../../components/ProjectVideos'
 import _404 from '../404'
 import { APIData, Data, Property } from '../../lib/types'
 
@@ -40,16 +41,22 @@ const ProjectData: NextPage<Data> = (props) => {
             <ProjectDescription value={[props.description]} delay={0.3} />
             {props.properties && props.properties.length > 0 && <ProjectProperties properties={props.properties} delay={0.4} />}
             {props.links && props.links.length > 0 && <ProjectLinks url={props.links} 
-                delay={0.4 + (props.properties ? props.properties?.length * 0.1 : 0.1)} />}
+                delay={0.4 + (props.properties ? props.properties?.length * 0.1 : 0.0)} />}
             {props.images && props.images.length > 0 && <ProjectImages images={props.images} 
-                delay={0.5 + 
-                (props.properties ? props.properties?.length * 0.1 : 0.1) +
-                (props.links ? props.links?.length * 0.1 : 0.1)} />}
+                delay={0.4 + 
+                (props.properties ? props.properties?.length * 0.1 : 0.0) +
+                (props.links ? props.links?.length * 0.1 : 0.0)} />}
+            {props.videos && props.videos?.length > 0 && <ProjectVideos videos={props.videos}
+                delay={0.4 +
+                (props.properties ? props.properties?.length * 0.1 : 0.0) +
+                (props.links ? props.links?.length * 0.1 : 0.0) + 
+                (props.images ? props.images?.length * 0.1 : 0.0)} />}
             <Footer delay={
                 0.4 +
                 (props.properties ? props.properties?.length * 0.1 : 0.1) +
                 (props.links ? props.links?.length * 0.1 : 0.1) + 
-                (props.images ? props.images?.length * 0.1 : 0.1)
+                (props.images ? props.images?.length * 0.1 : 0.1) + 
+                (props.videos ? props.videos?.length * 0.1 : 0.1)
             } />
         </>
     )

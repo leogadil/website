@@ -19,8 +19,6 @@ const ProjectImages : React.FC<IProjectImagesProps> = ({ images, delay }) => {
 
 const ProjectImage : React.FC<IProjectImageItemProps> = ({ src, delay, key }) => {
 
-    console.log(src)
-
     return (
         <>
             <AnimateSection 
