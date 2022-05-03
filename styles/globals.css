@@ -8,7 +8,6 @@
 @layer base {
     body {
         @apply bg-th-light dark:bg-th-dark transition-colors duration-200
-
     }
 
     * {
@@ -20,6 +19,7 @@
 
 body {
     overflow-y: overlay;
+    background-color: #18191A;
 }
 
 * {

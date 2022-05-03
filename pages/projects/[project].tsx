@@ -9,6 +9,7 @@ import ProjectDescription from '../../components/projectdescription'
 import ProjectProperties from '../../components/projectproperties'
 import ProjectLinks from '../../components/projectlinks'
 import ProjectImages from '../../components/ProjectImages'
+import _404 from '../404'
 import { APIData, Data, Property } from '../../lib/types'
 
 const ProjectData: NextPage<Data> = (props) => {
@@ -23,6 +24,10 @@ const ProjectData: NextPage<Data> = (props) => {
             url: `/projects/${props.slug}`,
         }
     ]
+
+    if(props.error) {
+        return <_404 reason='cant find the project you were looking for.'/>
+    }
 
     return (
         <>
@@ -65,6 +70,16 @@ export async function getServerSideProps(context: any) {
     const [projects] = await Promise.all([selectedProjectData])
 
     const projectData = findProject(projects.data, context.query.project)
+
+    console.log(projectData)
+
+    if(projectData === undefined) {
+        return {
+            props: {
+                error: "cant find project"
+            }
+        }
+    }
 
     return {
         props: {

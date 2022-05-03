@@ -1,8 +1,14 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import Image from 'next/image'
 import { IImageProps } from '../lib/types'
 
-const Image: React.FC<IImageProps> = ({imglink, title, className }) => {
+const ImageLoader = (src: string) => {
+    let srcnew = src.split('-').join('/')
+    console.log(`https://cdn.jsdelivr.net/gh/leogadil/website-cdn/assets/${srcnew}`)
+    return `https://cdn.jsdelivr.net/gh/leogadil/website-cdn/assets/${srcnew}`
+}
+
+const Image_: React.FC<IImageProps> = ({imglink, imgblur, title, className, relative, ispfp }) => {
 
     const [isError, setIsError] = React.useState(false)
 
@@ -20,7 +26,7 @@ const Image: React.FC<IImageProps> = ({imglink, title, className }) => {
     }
 
     return (
-        <img className={className + " rounded-2xl"} src={imglink} alt={title}
+        <Image className={(ispfp ? "rounded-full " : "rounded-2xl ") + className} blurDataURL={imgblur} src={relative ? imglink : ImageLoader(imglink)} width={ispfp ? 100: 360} height={ispfp ? 100: 220} layout='responsive' alt={title}
             onError={(e) => {
                 handleError(e)
             }}
@@ -28,4 +34,4 @@ const Image: React.FC<IImageProps> = ({imglink, title, className }) => {
     )
 }
 
-export default Image
+export default Image_

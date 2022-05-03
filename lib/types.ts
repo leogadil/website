@@ -1,18 +1,22 @@
 
 export type IProjectDescriptionProps = {
-    value: string[],
-    delay?: number,
+    value: string[]
+    delay?: number
+}
+
+export type I_404Props = {
+    reason?: string
 }
 
 export type IProjectImagesProps = {
-    images: string[],
-    delay?: number,
+    images: string[]
+    delay?: number
 }
 
 export type IProjectImageItemProps = {
-    src: string,
-    delay?: number,
-    key: string,
+    src: string
+    delay?: number
+    key: string
 }
 
 export type IHistoryLineProps = {
@@ -27,30 +31,31 @@ export type IHistoryProps = {
 }
 
 export type Property = {
-    title: string,
+    title: string
     value: any
     key: any
     delay?: number
 }
   
 export type Url = {
-    url: string,
-    title: string,
+    url: string
+    title: string
     key: any
     delay?: number
 }
 
 export type Data = {
-    name: string,
-    slug: string,
-    title: string,
-    cover: string,
-    description: string,
-    short_description: "",
-    properties?: Property[],
-    links?: Url[],
-    images?: string[],
-    videos?: Url[],
+    error?: string
+    name: string
+    slug: string
+    title: string
+    cover: string
+    description: string
+    short_description: ""
+    properties?: Property[]
+    links?: Url[]
+    images?: string[]
+    videos?: Url[]
 }
 
 export type APIData = {
@@ -58,12 +63,12 @@ export type APIData = {
 }
 
 export type IAnimateSectionProps = {
-    delay?: number,
+    delay?: number
     children?: React.ReactNode
-    className?: string,
-    whileHover?: any,
-    whileTap?: any,
-    key?: string | number,
+    className?: string
+    whileHover?: any
+    whileTap?: any
+    key?: string | number
 }
 
 export type IBannerLayoutProps = {
@@ -91,10 +96,10 @@ export type IBioColProps = {
 }
 
 export type IBlogsProps = {
-    delay: number,
+    delay: number
     blogs?: Array<{
-        imglink: string,
-        title: string,
+        imglink: string
+        title: string
         description: string
     }>
 }
@@ -105,31 +110,31 @@ export type IBlogsLayoutProps = {
 }
 
 export type IBlogProps = {
-    imglink: string,
-    title?: string,
+    imglink: string
+    title?: string
     description?: string
-    key: string | number,
+    key: string | number
     delay?: number
 }
 
 export type IButtonLinkProps = {
-    text: string,
-    url: string,
+    text: string
+    url: string
     delay?: number
 }
 
 export type IProjectPropertiesProps = {
-    properties: Property[] | any,
+    properties: Property[] | any
     delay?: number
 }
 
 export type IProjectLinksProps = {
-    url: Url[] | any,
+    url: Url[] | any
     delay?: number
 }
 
 export type ICenterTitleProps = {
-    text: string,
+    text: string
     delay?: number
 }
 
@@ -145,27 +150,30 @@ export type IFooterProps = {
 }
 
 export type IHeadProps = {
-    title: string,
-    description?: string,
-    image?: string,
+    title: string
+    description?: string
+    image?: string
     url?: string
 }
 
 export type IImageProps = {
-    imglink: string,
-    title?: string,
-    description?: string,
+    imgblur?: string
+    imglink: string
+    title?: string
+    description?: string
     className?: string
+    relative?: boolean
+    ispfp?: boolean
 }
 
 export type ILinkProps = {
-    link?: string,
-    text: string,
-    className?: string,
+    link?: string
+    text: string
+    className?: string
 }
 
 export type IProjectsProps = {
-    delay: number,
+    delay: number
     projects?: Data[]
 }
 
@@ -175,17 +183,17 @@ export type IProjectLayoutProps = {
 }
 
 export type IProjectProps = {
-    context: Data,
+    context: Data
     delay?: number
 }
 
 export type ISocialsProps = {
-    delay: number,
+    delay: number
 }
 
 export type ISocialItemProps = {
-    href: string,
-    Icon: any,
-    name?: string,
-    islast?: boolean,
+    href: string
+    Icon: any
+    name?: string
+    islast?: boolean
 }

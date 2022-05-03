@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 
 import AnimateSection from './animatesection'
+import Image_ from './image'
 
 import { IBannerLayoutProps, IIntroductionProps, IWelcomingProps } from '../lib/types'
 
 
-const BannerLayout : React.FC<IBannerLayoutProps> = ({ delay, children }) => {
+const BannerLayout: React.FC<IBannerLayoutProps> = ({ delay, children }) => {
     return (
         <AnimateSection
             delay={delay}
@@ -21,13 +22,13 @@ const BannerLayout : React.FC<IBannerLayoutProps> = ({ delay, children }) => {
 
 
 
-const Introduction : React.FC<IIntroductionProps> = ({delay}) => {
+const Introduction: React.FC<IIntroductionProps> = ({ delay }) => {
 
     return (
         <BannerLayout delay={delay}>
             <div className="flex flex-row justify-center pb-1">
                 <div className="sm:mr-5 w-20 mt-5 sm:mt-0 bg-accent-2 dark:bg-main-accent rounded-full p-0.5">
-                    <img className='w-20 h-19 m-auto rounded-full' src="/profilepic.jpg" alt="profile" />
+                    <Image_ relative ispfp imglink="/profilepic.jpg" title="profile" />
                 </div>
             </div>
             <div className="flex-1 flex flex-col sm:text-right text-center justify-center">
@@ -39,7 +40,7 @@ const Introduction : React.FC<IIntroductionProps> = ({delay}) => {
 }
 
 
-const Welcoming : React.FC<IWelcomingProps> = ({delay}) => {
+const Welcoming: React.FC<IWelcomingProps> = ({ delay }) => {
 
     return (
         <BannerLayout delay={delay}>
@@ -50,4 +51,4 @@ const Welcoming : React.FC<IWelcomingProps> = ({delay}) => {
     )
 }
 
-export {Introduction, Welcoming}
+export { Introduction, Welcoming }

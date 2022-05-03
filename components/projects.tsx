@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from './image'
+import Image_ from './image'
 import AnimateSection from './animatesection'
 import axios from 'axios'
 
@@ -35,8 +35,11 @@ const ProjectContainer : React.FC<IProjectProps> = ({ context, delay }) => {
     return (
         <AnimateSection whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} key={context.name} delay={delay} className="w-full h-26 cursor-pointer flex flex-col items-center">
             <Link href={'/projects/' + context.slug} scroll={false}>
-                <div>
-                    <Image className="h-[250px] object-cover sm:h-auto" imglink={'/api/assets/' + context.cover} title={context.name} />
+                <div className='w-full sm:mb-0 mb-10'>
+                    <div className=' w-full flex flex-col'>
+                        <Image_ imglink={context.cover} title={context.name} />
+                    </div>
+                    
                     <h1 className="font-mplus font-bold text-center">{context.title}</h1>
                     <div className="text-sm text-gray-1 text-center">{context.short_description}</div>
                 </div>
