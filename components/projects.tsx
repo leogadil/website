@@ -39,7 +39,7 @@ const ProjectContainer : React.FC<IProjectProps> = ({ context, delay }) => {
                     </div>
                     
                     <h1 className="font-mplus font-bold text-center">{context.title}</h1>
-                    <div className="text-sm text-gray-1 text-center">{context.short_description}</div>
+                    <div className="text-sm dark:text-gray-1 text-gray-2  text-center">{context.short_description}</div>
                 </div>
             </Link>
         </AnimateSection>
