@@ -13,7 +13,7 @@ const Header : React.FC = () => {
     const {theme, setTheme} = useTheme()
 	const route = useRouter()
 	
-	const [burgerisOpen, setBurgerisOpen] = useState(true)
+	const [burgerisOpen, setBurgerisOpen] = useState(false)
 
 	const [Sroute, setSroute] = useState(route.pathname)
 
@@ -44,7 +44,7 @@ const Header : React.FC = () => {
 		<>
 			<AnimatePresence>
 				{burgerisOpen && 
-					<motion.div className='fixed top-[52px] mx-5 right-[45px] z-[500] w-[200px] rounded-lg sm:hidden block overflow-hidden dark:bg-th-light-dark bg-th-light-light drop-shadow-xl' 
+					<motion.div className='fixed top-[52px] mx-5 right-[0px] z-[500] w-[250px]  rounded-lg sm:hidden block overflow-hidden dark:bg-th-light-dark bg-th-light-light drop-shadow-xl' 
 						variants={variants}
 						initial={variants.hide}
 						animate={"show"}
