@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-The site is hosted on vercel [leogadil.now.sh](https://leogadil.now.sh/).
+The site is hosted on vercel [leogadil.com](https://leogadil.com/).
 
 ## Tech Stack
 
