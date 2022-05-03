@@ -47,3 +47,82 @@ body {
         @apply border-2
     }
 } */
+
+/* nprogress styles */
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+    z-index: 200;
+}
+
+#nprogress .bar {
+    background: #D85C27;
+
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    display: none;
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+    display: block;
+    position: absolute;
+    z-index: 1031;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nprogress .spinner-icon {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+
+    border: solid 4px transparent;
+    border-top-color: #D85C27;
+    border-left-color: #D85C27;
+    border-radius: 50%;
+
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+#nprogress .peg {
+    display: none;
+    z-index: 1031;
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
