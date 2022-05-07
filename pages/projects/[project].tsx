@@ -64,7 +64,7 @@ const ProjectData: NextPage<Data> = (props) => {
 
 export async function getServerSideProps(context: any) {
 
-    const cdntemplate = "https://cdn.jsdelivr.net/gh/leogadil/website-cdn/"
+    const cdntemplate = "https://cdn.jsdelivr.net/gh/leogadil/website-cdn@latest/"
 
     const cdn = cdntemplate + "projects.json"
 

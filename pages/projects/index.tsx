@@ -24,7 +24,7 @@ const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
 
 export async function getServerSideProps() {
 
-    const cdn = "https://cdn.jsdelivr.net/gh/leogadil/website-cdn/projects.json"
+    const cdn = "https://cdn.jsdelivr.net/gh/leogadil/website-cdn@latest/projects.json"
 
     const projectsData = axios({
         method: 'get',
