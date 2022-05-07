@@ -4,7 +4,7 @@ import { IImageProps } from '../lib/types'
 
 const ImageLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
-    return `https://cdn.jsdelivr.net/gh/leogadil/website-cdn@latest/assets/${srcnew}`
+    return `https://cdn.jsdelivr.net/gh/leogadil/website-cdn/assets/${srcnew}`
 }
 
 const Image_: React.FC<IImageProps> = ({imglink, imgblur, title, className, relative, ispfp }) => {
