@@ -18,7 +18,7 @@ const HomePage: NextPage = () => {
 	if (!mounted) return null
 	return (
 		<>
-			<HeadMeta title="Homepage"/>
+			<HeadMeta title="Software Developer"/>
 			<Introduction delay={0.1}/>
 			<Description title="About" delay={0.2} isindented description={[
 				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites that peaks the interests of users. as a full-stack developer.",

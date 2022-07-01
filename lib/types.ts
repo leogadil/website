@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { IconType } from "react-icons"
 
 export type IProjectDescriptionProps = {
     value: string[]
@@ -221,5 +222,5 @@ export type ICarouselItemProps = {
     link: string
     name: string
     from: string
-    icon: ReactNode
+    icon: IconType
 }

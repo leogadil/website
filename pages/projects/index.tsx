@@ -6,14 +6,13 @@ import CenterTitle from '../../components/centertitle'
 import Footer from '../../components/footer'
 import Projects from "../../components/projects"
 import { IProjectsProps, APIData } from '../../lib/types'
+import HeadMeta from '../../components/head'
 
 const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
 
     return (
         <>
-            <Head>
-				<title>Projects</title>
-			</Head>
+            <HeadMeta title="Projects"/>
             <CenterTitle text="Projects" delay={0.1} />
             <Projects delay={0.2} projects={projects} />
             <Footer delay={projects && projects.length != 0 ? (projects.length * 0.1) + 0.2 : 0.3}/>

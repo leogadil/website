@@ -9,19 +9,19 @@ const certs = [
         name: 'Learn Basic Statistics with Python',
         link: 'https://courses.buri.io/view/user/certificate/0cbde3ca-56b1-4128-ae39-c4a84fe42f7e/html/',
         from: 'DICT',
-        icon: <SiPython />,
+        icon: SiPython,
     },
     {
         name: 'Analyze Data with Python',
         link: 'https://courses.buri.io/view/user/certificate/a42693e1-ab85-47e2-aedf-cb7e18463416/html/',
         from: 'DICT',
-        icon: <SiPython />,
+        icon: SiPython,
     },
     {
         name: 'Visualize Data with Python',
         link: 'https://courses.buri.io/view/user/certificate/ca816fa4-55de-4394-a41f-d06b3ce26b73/html/',
         from: 'DICT',
-        icon: <SiPython />,
+        icon: SiPython,
     }
 ]
 
@@ -48,7 +48,7 @@ const CarouselItem: React.FC<ICarouselItemProps> = ({ name, link, from, icon }) 
     return (
         <div className='goldcertificate py-2 rounded-xl flex flex-col drop-shadow-2xl w-[175px] h-[175px]'>
             <div className='flex flex-col justify-center items-center mb-1'>
-                {icon}
+                {React.createElement(icon, {className:"text-white-1 dark:text-white-1 "})}
             </div>
             <span className='text-sm pl-4 opacity-75 drop-shadow-lg text-white-1 dark:text-white-1'>certificate</span>
             <div className='px-4 flex flex-col justify-between h-full mt-1'>
