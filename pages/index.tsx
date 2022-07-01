@@ -9,6 +9,7 @@ import ButtonLink from '../components/buttonlink';
 import { Socials } from '../components/socials';
 import Footer from '../components/footer';
 import HeadMeta from '../components/head';
+import { Carousel } from '../components/carousel';
 
 const HomePage: NextPage = () => {
 	const [mounted, setMounted] = useState(false)
@@ -31,12 +32,13 @@ const HomePage: NextPage = () => {
 				['Studied at', <Link link="https://www.facebook.com/St-Michael-Montessori-Integrated-School-230990113578947/" text="St. Michael Montesorri Integrated School" />],
 				['Studying at', <Link link="https://www.sti.edu/" text="STI College Ortigas-Cainta" />],
 			]} />
-			<Description title="Pastimes" delay={0.6} description={[
+			<Carousel delay={0.6}/>
+			<Description title="Pastimes" delay={0.7} description={[
 				"I like to watch movies, play games, and listen to music. I also like to make cinematics and make videos.",
 			]} />
-			<Socials delay={0.7} />
-			<ButtonLink text="See my projects" url="/projects" delay={0.8} />
-			<Footer delay={0.9}/>
+			<Socials delay={0.8} />
+			<ButtonLink text="See my projects" url="/projects" delay={0.9} />
+			<Footer delay={1}/>
 		</>
 	)
 }

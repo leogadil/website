@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     colors: {
       'th-dark': '#18191A',
+      'th-dark-half': '#18191A80',
       'th-light-dark': '#212324',
       'th-light': '#EFE6DD',
+      'th-light-half': '#EFE6DD80',
       'th-light-light': '#e2d2c2',
       'accent-1': '#FD5D5D',
       'accent-2': '#845BB3',

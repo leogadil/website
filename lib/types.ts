@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 
 export type IProjectDescriptionProps = {
     value: string[]
@@ -181,8 +182,9 @@ export type IImageProps = {
 
 export type ILinkProps = {
     link?: string
-    text: string
-    className?: string
+    text: string 
+    className?: string,
+    showLinkIcon?: boolean
 }
 
 export type IProjectsProps = {
@@ -209,4 +211,15 @@ export type ISocialItemProps = {
     Icon: any
     name?: string
     islast?: boolean
+}
+
+export type ICarouselProps = {
+    delay?: number
+}
+
+export type ICarouselItemProps = {
+    link: string
+    name: string
+    from: string
+    icon: ReactNode
 }

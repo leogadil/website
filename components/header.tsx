@@ -75,7 +75,7 @@ const Header : React.FC = () => {
 				}
 			</AnimatePresence>
 			
-			<nav className="w-full px-3 fixed backdrop-filter backdrop-blur-2xl z-10" >
+			<nav className="w-full px-3 fixed bg-th-light-half dark:bg-th-dark-half backdrop-filter backdrop-blur-2xl z-10 transition-colors duration-200" >
 				<div className="p-2 max-w-3xl mx-auto flex flex-row justify-between ">
 					<div className="flex flex-row items-center">
 						{/* <img src="/vercel.svg" className="h-12" /> */}

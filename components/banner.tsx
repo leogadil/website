@@ -8,15 +8,19 @@ import { IBannerLayoutProps, IIntroductionProps, IWelcomingProps } from '../lib/
 
 const BannerLayout: React.FC<IBannerLayoutProps> = ({ delay, children }) => {
     return (
+        <>
         <AnimateSection
             delay={delay}
             className="px-8 w-full"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}>
-            <div className="dark:bg-th-light-dark bg-th-light-light w-full rounded-md mb-10 px-4 py-3 flex sm:flex-row flex-col-reverse duration-600 ease-in-out cursor-pointer">
+            <div className="dark:bg-th-light-dark bg-th-light-light w-full rounded-md px-4 py-3 flex sm:flex-row flex-col-reverse duration-600 ease-in-out cursor-pointer transition-colors duration-200">
                 {children}
             </div>
         </AnimateSection>
+        {/* A dirty fix. will come back here later */}
+        <div className='mb-10'></div>
+        </>
     )
 }
 
@@ -32,7 +36,7 @@ const Introduction: React.FC<IIntroductionProps> = ({ delay }) => {
                 </div>
             </div>
             <div className="flex-1 flex flex-col sm:text-right text-center justify-center">
-                <h1 className="text-3xl font-bold antialiased tracking-wider font-mplus leading-none">Jann Leo Gadil</h1>
+                <h1 className="text-3xl font-bold antialiased tracking-wider font-mplus leading-none transition-colors duration-200">Jann Leo Gadil</h1>
                 <h2 className="text-2xl font-bold antialiased tracking-widest font-kaushan leading-[.01em] text-accent-2 dark:text-main-accent">Full-stack Developer</h2>
             </div>
         </BannerLayout>
