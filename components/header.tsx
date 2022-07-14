@@ -52,7 +52,7 @@ const Header: React.FC = () => {
 						key={`burger-menu`}
 					>
 						<div className=" cursor-pointer ">
-							<Link href="/resume" scroll={false}>
+							<Link href="/cv" scroll={false}>
 								<button className="hover:dark:bg-main-accent hover:bg-accent-2 w-full p-3 text-md hover:text-th-light transition-colors" onClick={() => setBurgerisOpen(false)}>CV</button>
 							</Link>
 						</div>
@@ -90,10 +90,10 @@ const Header: React.FC = () => {
 					<div className="flex flex-row items-center">
 						<ul className="flex mr-4">
 							<li className="flex-1 mr-3 cursor-pointer text-lg hidden sm:block">
-								<Link href="/resume" scroll={false}>
+								<Link href="/cv" scroll={false}>
 									<button className="hover:dark:text-main-accent hover:text-accent-2 transition-colors">CV</button>
 								</Link>
-								<div className={"w-full h-1 rounded bg-transparent dark:bg-transparent transition-colors " + (Sroute.toLowerCase().indexOf('/resume') != -1 ? 'bg-accent-2 dark:bg-main-accent' : '')}>
+								<div className={"w-full h-1 rounded bg-transparent dark:bg-transparent transition-colors " + (Sroute.toLowerCase().indexOf('/cv') != -1 ? 'bg-accent-2 dark:bg-main-accent' : '')}>
 								</div>
 							</li>
 							<li className="flex-1 mr-3 cursor-pointer text-lg hidden sm:block">
