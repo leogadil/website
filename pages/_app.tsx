@@ -30,6 +30,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 		}
 	})
 
+	if(router.pathname === '/cv') {
+		return <Component {...pageProps} />
+	}
+
 	return (
 		<ThemeProvider attribute='class' enableColorScheme>
 			<div className="flex flex-col overflow-y-hidden">

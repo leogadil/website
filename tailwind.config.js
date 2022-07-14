@@ -34,6 +34,7 @@ module.exports = {
         'caveat': ['"Caveat"', "cursive"],
         'kaushan': ['"Kaushan Script"', "cursive"],
         'roboto': ['"Roboto"', "sans-serif"],
+        'mortelSans': ['"Mortel Sans"', "sans-serif"],
        },
     },
   },

@@ -46,7 +46,7 @@ const Carousel: React.FC<ICarouselProps> = ({ delay }) => {
 
 const CarouselItem: React.FC<ICarouselItemProps> = ({ name, link, from, icon }) => {
     return (
-        <div className='goldcertificate py-2 rounded-xl flex flex-col drop-shadow-2xl w-[175px] h-[175px]'>
+        <div className='goldcertificate py-2 rounded-xl flex flex-col drop-shadow-2xl sm:w-[175px] sm:h-[175px] w-[135px] h-[175px]'>
             <div className='flex flex-col justify-center items-center mb-1'>
                 {React.createElement(icon, {className:"text-white-1 dark:text-white-1 "})}
             </div>
@@ -55,7 +55,7 @@ const CarouselItem: React.FC<ICarouselItemProps> = ({ name, link, from, icon }) 
                 <h1 className='font-bold text-lg drop-shadow-lg leading-5 text-white-1 dark:text-white-1'>{name}</h1>
                 <div className='flex flex-col items-left justify-between'>
                     <h2 className='text-sm font-mplus drop-shadow-lg text-white-1 dark:text-white-1 mb-1'>{from}</h2>
-                    <div className='text-right'>
+                    <div className='sm:text-right'>
                         <Link link={link} text={`view certificate`} className='text-white-1 dark:text-white-1 text-sm drop-shadow-lg' />
                     </div>
                 </div>
