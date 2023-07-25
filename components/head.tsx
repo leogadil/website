@@ -1,17 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
 
-type IHeadProps = {
-    title: string,
-    description?: string,
-    image?: string,
-    url?: string
-}
+import { IHeadProps } from '../lib/types'
 
 const HeadMeta : React.FC<IHeadProps> = ({ title, description, image, url }) => {
     return (
         <Head>
-            <title>{"Leogadil Portfolio - " + title}</title>
+            <title>{"Leogadil - " + title}</title>
             <meta 
                 name="description" 
                 content={description ? description : "I'm a software engineer and a web developer."}

@@ -1,10 +1,6 @@
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
-  purge: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -12,15 +8,19 @@ module.exports = {
   theme: {
     colors: {
       'th-dark': '#18191A',
+      'th-dark-half': '#18191A80',
       'th-light-dark': '#212324',
       'th-light': '#EFE6DD',
-      'th-light-light': '#E9D7D0',
+      'th-light-half': '#EFE6DD80',
+      'th-light-light': '#e2d2c2',
       'accent-1': '#FD5D5D',
       'accent-2': '#845BB3',
       'accent-2-half': '#845BB340',
+      'accent-2-half-full': '#71499e',
       'accent-2-light': '#9d7cc2',
       'main-accent': '#D85C27',
       'main-accent-half': '#D85C2740',
+      'main-accent-half-full': '#b74e21',
       'main-accent-hover': '#e07d52',
       'gray-1': '#a7a19b',
       'gray-2': '#484542',
@@ -34,6 +34,7 @@ module.exports = {
         'caveat': ['"Caveat"', "cursive"],
         'kaushan': ['"Kaushan Script"', "cursive"],
         'roboto': ['"Roboto"', "sans-serif"],
+        'mortelSans': ['"Mortel Sans"', "sans-serif"],
        },
     },
   },

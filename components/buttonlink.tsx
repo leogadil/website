@@ -5,11 +5,7 @@ import AnimateSection from './animatesection'
 
 import { FaAngleRight } from 'react-icons/fa'
 
-type IButtonLinkProps = {
-    text: string,
-    url: string,
-    delay?: number
-}
+import { IButtonLinkProps } from '../lib/types'
 
 const ButtonLink : React.FC<IButtonLinkProps> = ({ text, url, delay }) => {
 

@@ -2,14 +2,9 @@ import React, { useEffect } from 'react'
 
 import AnimateSection from './animatesection'
 
-type IProps = {
-	title: string
-	description: Array<string>
-	delay?: number
-	isindented?: boolean
-}
+import { IDescriptionProps } from '../lib/types'
 
-const Description: React.FC<IProps> = ({ title, description, delay, isindented }) => {
+const Description: React.FC<IDescriptionProps> = ({ title, description, delay, isindented }) => {
 
 	return (
 		<AnimateSection

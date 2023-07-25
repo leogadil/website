@@ -5,14 +5,36 @@ import { ThemeProvider } from 'next-themes'
 import { AnimatePresence } from 'framer-motion'
 import {useRouter} from 'next/router';
 
+import Router from 'next/router'
+import nProgress from 'nprogress'
 import Header from '../components/header'
 
 import uuid from '../lib/uuid'
 
 
+
 function MyApp({ Component, pageProps }: AppProps) {
 
 	const router = useRouter()
+
+	useEffect(() => {
+		const handlleRouteStart = () => nProgress.start()
+		const handleRouteEnd = () => nProgress.done()
+		
+		Router.events.on('routeChangeStart', handlleRouteStart)
+		Router.events.on('routeChangeComplete', handleRouteEnd)
+		Router.events.on('routeChangeError', handleRouteEnd)
+
+		return () => {
+			Router.events.off('routeChangeStart', handlleRouteStart)
+			Router.events.off('routeChangeComplete', handleRouteEnd)
+			Router.events.off('routeChangeError', handleRouteEnd)
+		}
+	})
+
+	if(router.pathname === '/cv') {
+		return <Component {...pageProps} />
+	}
 
 	return (
 		<ThemeProvider attribute='class' enableColorScheme>

@@ -3,10 +3,9 @@ import Link from 'next/link'
 import AnimateSection from './animatesection'
 
 import { SiYoutube, SiTwitter, SiFacebook, SiGithub } from 'react-icons/si';
+import { CgLink } from 'react-icons/cg';
+import { ISocialsProps, ISocialItemProps } from '../lib/types'
 
-type ISocialsProps = {
-    delay: number,
-}
 
 const Socials: React.FC<ISocialsProps> = ({delay}) => {
 
@@ -61,12 +60,6 @@ const Socials: React.FC<ISocialsProps> = ({delay}) => {
     )
 }
 
-type ISocialItemProps = {
-    href: string,
-    Icon: any,
-    name?: string,
-    islast?: boolean,
-}
 
 const SocialItem: React.FC<ISocialItemProps> = ({ Icon, href, name, islast }) => {
     return (
@@ -74,6 +67,7 @@ const SocialItem: React.FC<ISocialItemProps> = ({ Icon, href, name, islast }) =>
             <button key={name} className={"dark:hover:bg-main-accent-half hover:bg-accent-2-half p-1 px-4 pl-4 pb-[.5em] rounded flex flex-row items-center w-max transition-colors " + (!islast && ' mb-1')}>
                 <Icon size="1em" className="dark:text-special-1 text-special-2 mt-[1px]" />
                 <h1 className="dark:text-special-1 text-special-2 font-mplus font-bold ml-3">{name}</h1>
+                <CgLink className='dark:text-special-1 text-special-2 ml-1'/>
             </button>
         </Link>
     )

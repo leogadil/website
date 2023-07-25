@@ -1,14 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { IAnimateSectionProps } from '../lib/types'
 
-type IAnimateSectionProps = {
-    delay?: number,
-    children?: React.ReactNode
-    className?: string,
-    whileHover?: any
-}
-
-const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, className, whileHover }) => {
+const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, className, whileHover, whileTap, key }) => {
 
     const animateVariants = {
         show: {
@@ -31,12 +25,14 @@ const AnimateSection : React.FC<IAnimateSectionProps> = ({ delay, children, clas
     
     return (
         <motion.div
+            key={key ? key : `delay${delay}-animate-section`}
             variants={animateVariants}
             initial={{ opacity: 0, y: -20 }}
             animate={"show"}
             exit={"hide"}
             className={className}
             whileHover={whileHover}
+            whileTap={whileTap}
         >
             {children}
         </motion.div>
