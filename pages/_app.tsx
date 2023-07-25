@@ -9,6 +9,8 @@ import Router from 'next/router'
 import nProgress from 'nprogress'
 import Header from '../components/header'
 
+import uuid from '../lib/uuid'
+
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -36,9 +38,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<ThemeProvider attribute='class' enableColorScheme>
-			<div className="flex flex-col overflow-y-hidden">
+			<div className="flex flex-col">
 				<Header />
-				<div className="w-full max-w-lg mx-auto mt-32 flex-1 flex flex-col items-center justify-center relative">
+				<div className="w-full max-w-lg mx-auto mt-32 flex-1 flex flex-col items-center justify-center">
 					<AnimatePresence exitBeforeEnter>
 						<Component {...pageProps} key={router.pathname}/>
 					</AnimatePresence>

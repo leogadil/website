@@ -36,7 +36,7 @@ const Introduction: React.FC<IIntroductionProps> = ({ delay }) => {
                 </div>
             </div>
             <div className="flex-1 flex flex-col sm:text-right text-center justify-center">
-                <h1 className="text-3xl font-bold antialiased tracking-wider font-mplus leading-none transition-colors duration-200">Jann Leo Gadil</h1>
+                <h1 className="text-3xl font-bold antialiased tracking-wider font-mplus leading-none break- transition-colors duration-200">Jann Leo Gadil</h1>
                 <h2 className="text-2xl font-bold antialiased tracking-widest font-kaushan leading-[.01em] text-accent-2 dark:text-main-accent">Full-stack Developer</h2>
             </div>
         </BannerLayout>
