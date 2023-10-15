@@ -21,13 +21,11 @@ const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000/projects.json' : process.env.PUBLIC_URL + '/projects.json'
 
     const res = await axios.get<APIData>(projectsLink)
-
-    console.log(res.data.project)
 
     return {
         props: {
