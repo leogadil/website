@@ -21,23 +21,23 @@ const HomePage: NextPage = () => {
 			<HeadMeta title="Software Developer"/>
 			<Introduction delay={0.1}/>
 			<Description title="About" delay={0.2} isindented description={[
-				"Hello, I'm Jann Leo Gadil, a full-stack developer based in Manila. I like creating scripts, programs, and websites that peaks the interests of users. as a full-stack developer.",
-				"I remember the first software i built, a voice recognition program in C# like J.A.R.V.I.S from Iron Man. It's feature include playing music, telling the news, and even searching with your voice. Now, I am able to create all kinds of programs, scripts, websites that help clients, businesses, in their needs."
+				"👋 I'm Jann Leo Gadil, a passionate software developer in Manila. 💻 I create captivating scripts, programs, and websites. Inspired by J.A.R.V.I.S from Iron Man, I've developed voice recognition software for music, news, and web searches. 🤖 Now, I craft diverse software solutions to meet clients' and businesses' needs. 🚀",
+				
 			]} />
-			<ButtonLink text="Read my Blogs" url="/blogs" delay={0.3} />
-			<Welcoming delay={0.4}/>
-			<Biography title="Bio" delay={0.5} description={[
+			{/* <ButtonLink text="Read my Blogs" url="/blogs" delay={0.3} /> */}
+			<Welcoming delay={0.3}/>
+			<Biography title="Bio" delay={0.4} description={[
 				['Born', 'April 03, 2001'],
 				['Lives in', 'Manila, Philippines'],
 				['Studied at', <Link link="https://www.facebook.com/St-Michael-Montessori-Integrated-School-230990113578947/" text="St. Michael Montesorri Integrated School" />],
-				['Studying at', <Link link="https://www.sti.edu/" text="STI College Ortigas-Cainta" />],
+				['Studied at', <Link link="https://www.sti.edu/" text="STI College Ortigas-Cainta" />],
 			]} />
-			<Carousel delay={0.6}/>
-			<Description title="Pastimes" delay={0.7} description={[
+			<Carousel delay={0.5}/>
+			<Description title="Pastimes" delay={0.6} description={[
 				"I like to watch movies, play games, and listen to music. I also like to make cinematics and make videos.",
 			]} />
-			<Socials delay={0.8} />
-			<ButtonLink text="See my projects" url="/projects" delay={0.9} />
+			<Socials delay={0.7} />
+			<ButtonLink text="See my projects" url="/projects" delay={0.8} />
 			<Footer delay={1}/>
 		</>
 	)

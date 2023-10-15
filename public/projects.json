@@ -1,0 +1,167 @@
+{
+    "project": [
+        {
+            "name": "movingforward",
+            "slug": "moving-forward",
+            "title": "Moving Forward",
+            "cover": "movingforward-cover.png",
+            "description": "is 2D Mobile Task Management Simulation single player game that aims to provide positive effects and benefits to the emotional well-being of an individual.",
+            "short_description": "is a 2D Task Management Simulation Game for Emotional Wellbeing",
+            "properties": [
+                {
+                    "title": "Tech-Stack",
+                    "value": "C#, Unity, Firebase"
+                },
+                {
+                    "title": "Platform",
+                    "value": "Android"
+                },
+                {
+                    "title": "Team",
+                    "value": "Leo Gadil, Andrei Jei Martinez, Marc Ryan Valle, Alexis Kyle Olympia"
+                }
+            ],
+            "links": [
+                {
+                    "title": "Github",
+                    "url": "https://github.com/LeoooooGadil/MovingForward-Reimagined"
+                }
+            ],
+            "download": {
+                "text": "Download APK",
+                "type": "apk",
+                "filename": "Moving Forward.apk",
+                "url": "movingforward-movingforward.apk"
+            },
+            "images": [
+                "movingforward-screenshot_01.png",
+                "movingforward-screenshot_02.png",
+                "movingforward-screenshot_03.png",
+				"movingforward-screenshot_04.png",
+				"movingforward-screenshot_05.png",
+				"movingforward-screenshot_06.png",
+				"movingforward-screenshot_07.png"
+            ],
+            "videos": [
+                {
+                    "title": "Trailer",
+                    "url": "https://youtu.be/5qtUriBqKTg"
+                }
+            ]
+
+        },
+        {
+            "name": "spaceverse",
+            "slug": "spaceverse",
+            "title": "SpaceVerse",
+            "cover": "spaceverse-cover.png",
+            "description": "SpaceVerse is an app for productivity. A place where you can focus on your task at hand while you travel around the world on your own desk. It's still on its early stages and is still under development.",
+            "short_description": "is an app for productivity while you travel around the world.",
+            "properties": [
+                {
+                    "title": "Tech-Stack",
+                    "value": "React, Redux, Node, MongoDB, Express, Socket.io"
+                },
+                {
+                    "title": "Platform",
+                    "value": "Windows, Linux, MacOS"
+                }
+            ],
+            "links": [
+                {
+                    "title": "Website",
+                    "url": "https://spaceverse.leogadil.com/"
+                }
+            ],
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "samantha",
+            "slug": "samantha-project",
+            "title": "Samantha",
+            "cover": "samantha-cover.jpg",
+            "description": "Engine 3 is the third iteration of the Samantha Engine. Samantha engine is the core and the framework of what an assistant interface might be like. its design is modular so it's easy to add functionality to the framework.",
+            "short_description": "is a natural language intelligent digital assistant.",
+            "properties": [
+                {
+                    "title": "Tech-Stack",
+                    "value": "Python, Electron, React Native"
+                },
+                {
+                    "title": "Platform",
+                    "value": "Windows, Linux"
+                }
+            ],
+            "links": [],
+            "images": [],
+            "videos": []
+        },
+        {
+            "name": "atlas",
+            "slug": "atlas-chatbot",
+            "title": "Atlas",
+            "cover": "atlas-cover.jpg",
+            "description": "is a digital chatbot that can answer questions about the given restaurant and order food through it.",
+            "short_description": "is a restaurant chatbot. You can ask questions about the restaurant.",
+            "properties": [
+                {
+                    "title": "Tech-Stack",
+                    "value": "Python"
+                }
+            ],
+            "links": [
+                {
+                    "title": "Github",
+                    "url": "https://github.com/leogadil/ATLAS-CHATBOT"
+                }
+            ],
+            "images": [
+                "atlas-screenshot_01.png",
+                "atlas-screenshot_01.png"
+            ],
+            "videos": [
+                {
+                    "title": "Demo",
+                    "url": "https://youtu.be/f-m-c_Jh1PE"
+                }
+            ]
+        },
+        {
+            "name": "payroool",
+            "slug": "payroool-program",
+            "title": "Payroool",
+            "cover": "payroool-cover.jpg",
+            "description": "is a simple program to manage payrolls in company. this manage the employees and compute their salaries accordingly.",
+            "short_description": "is a payroll management program.",
+            "properties": [
+                {
+                    "title": "Tech-Stack",
+                    "value": "C#"
+                },
+                {
+                    "title": "Platform",
+                    "value": "Windows"
+                }
+            ],
+            "links": [
+                {
+                    "title": "Github",
+                    "url": "https://github.com/leogadil/Payroll"
+                }
+            ],
+            "images": [
+                "payroool-screenshot_01.png",
+                "payroool-screenshot_02.png",
+                "payroool-screenshot_03.png"
+            ],
+            "videos": [
+                {
+                    "title": "Demo",
+                    "url": "https://youtu.be/R6eWIClgMGc"
+                }
+            ]
+
+        }
+    ]
+}

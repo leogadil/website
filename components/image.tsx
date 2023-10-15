@@ -4,7 +4,8 @@ import { IImageProps } from '../lib/types'
 
 const ImageLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
-    return `https://cdn.jsdelivr.net/gh/leogadil/website-cdn/assets/${srcnew}`
+    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000' : process.env.PUBLIC_URL
+    return `${projectsLink}/assets/${srcnew}`
 }
 
 const Image_: React.FC<IImageProps> = ({imglink, imgblur, title, className, relative, ispfp }) => {

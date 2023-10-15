@@ -51,6 +51,13 @@ export type Property = {
     key: any
     delay?: number
 }
+
+export type downloadButton = {
+    text: string
+    type: string
+    filename: string
+    url: string
+}
   
 export type Url = {
     url: string
@@ -68,6 +75,7 @@ export type Data = {
     description: string
     short_description: ""
     properties?: Property[]
+    download?: downloadButton
     links?: Url[]
     images?: string[]
     videos?: Url[]
@@ -88,6 +96,7 @@ export type IAnimateSectionProps = {
 
 export type IBannerLayoutProps = {
     delay?: number
+    isbackgroundOff?: boolean
     children?: React.ReactNode
 }
 
@@ -137,6 +146,15 @@ export type IButtonLinkProps = {
     url: string
     delay?: number
 }
+
+export type IDownloadLinkProps = {
+    text: string
+    type: string
+    filename: string
+    url: string
+    delay?: number
+}
+
 
 export type IProjectPropertiesProps = {
     properties: Property[] | any

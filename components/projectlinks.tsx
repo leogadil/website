@@ -22,7 +22,7 @@ const LinkItem : React.FC<Url> = ({ title, url, key, delay }) => {
     return (
         <AnimateSection className=" w-full px-8 mb-5 grid grid-cols-4" key={key} delay={delay}>
             <div className=" text-sm font-mplus font-bold dark:text-main-accent text-accent-2">{title}</div>
-            <Link link={url} text={url} className="break-normal col-span-3 text-sm font-normal" />
+            <Link link={url} text={url} className="col-span-3 text-sm font-normal" />
         </AnimateSection>
     )
 }

@@ -7,6 +7,7 @@ import Footer from '../../components/footer'
 import Projects from "../../components/projects"
 import { IProjectsProps, APIData } from '../../lib/types'
 import HeadMeta from '../../components/head'
+import { useState } from 'react'
 
 const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
 
@@ -20,24 +21,19 @@ const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
     )
 }
 
+export async function getStaticProps() {
 
-export async function getServerSideProps() {
+    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000/projects.json' : process.env.PUBLIC_URL + '/projects.json'
 
-    const cdn = "https://cdn.jsdelivr.net/gh/leogadil/website-cdn/projects.json"
+    const res = await axios.get<APIData>(projectsLink)
 
-    const projectsData = axios({
-        method: 'get',
-        url: cdn,
-        responseType: 'json'
-    })
-    
-    const [ projects ] = await Promise.all([projectsData])
+    console.log(res.data.project)
 
     return {
         props: {
-            projects: projects.data.project
+            projects: res.data.project
         }
-    };
+    }
 }
 
 export default ProjectsPage
