@@ -7,7 +7,6 @@ import Footer from '../../components/footer'
 import Projects from "../../components/projects"
 import { IProjectsProps, APIData } from '../../lib/types'
 import HeadMeta from '../../components/head'
-import { useState } from 'react'
 
 const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
 
@@ -23,7 +22,7 @@ const ProjectsPage: NextPage<IProjectsProps> = ({ projects }) => {
 
 export async function getServerSideProps() {
 
-    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000/projects.json' : process.env.PUBLIC_URL + '/projects.json'
+    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000/projects.json' : '/projects.json'
 
     const res = await axios.get<APIData>(projectsLink)
 
