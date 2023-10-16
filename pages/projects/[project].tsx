@@ -16,8 +16,7 @@ import ProjectsData from "../../public/projects.json"
 
 const DownloadLinkLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
-    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000' : process.env.PUBLIC_URL
-    return `${projectsLink}/assets/${srcnew}`
+    return `/assets/${srcnew}`
 }
 
 const ProjectData: NextPage<Data> = (props) => {
