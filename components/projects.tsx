@@ -2,7 +2,6 @@ import React from 'react'
 
 import Image_ from './image'
 import AnimateSection from './animatesection'
-import axios from 'axios'
 
 import { IProjectsProps, IProjectLayoutProps, IProjectProps } from '../lib/types'
 import Link from 'next/link'

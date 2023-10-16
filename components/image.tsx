@@ -4,7 +4,8 @@ import { IImageProps } from '../lib/types'
 
 const ImageLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
-    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000' : process.env.PUBLIC_URL
+    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000' : process.env.REACT_APP_PUBLIC_URL
+    console.log(`${projectsLink}/assets/${srcnew}`)
     return `${projectsLink}/assets/${srcnew}`
 }
 
