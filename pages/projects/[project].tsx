@@ -1,4 +1,3 @@
-import axios from 'axios'
 import type { NextPage } from 'next'
 import React from 'react'
 import HeadMeta from '../../components/head'
@@ -13,6 +12,7 @@ import ProjectVideos from '../../components/ProjectVideos'
 import _404 from '../404'
 import { APIData, Data } from '../../lib/types'
 import DownloadLink from '../../components/downloadlink'
+import ProjectsData from "../../public/projects.json"
 
 const DownloadLinkLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
@@ -77,17 +77,7 @@ const ProjectData: NextPage<Data> = (props) => {
 
 export async function getServerSideProps(context: any) {
 
-    const projectsLink = process.env.NODE_ENV == 'development' ? 'http://localhost:3000/projects.json' : process.env.PUBLIC_URL + '/projects.json'
-
-    const selectedProjectData = axios({
-        method: 'get',
-        url: projectsLink,
-        responseType: 'json'
-    })
-
-    const [projects] = await Promise.all([selectedProjectData])
-
-    const projectData = findProject(projects.data, context.query.project)
+    const projectData = findProject(ProjectsData as APIData, context.query.project)
 
     console.log(projectData)
 

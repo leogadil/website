@@ -4,4 +4,7 @@ module.exports = {
   images: {
     domains: ['localhost', 'leogadil.com'],
   },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname
+  }
 }
