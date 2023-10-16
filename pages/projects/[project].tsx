@@ -16,6 +16,7 @@ import ProjectsData from "../../public/projects.json"
 
 const DownloadLinkLoader = (src: string) => {
     let srcnew = src.split('-').join('/')
+    console.log(`/assets/${srcnew}`)
     return `/assets/${srcnew}`
 }
 
