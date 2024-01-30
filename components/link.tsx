@@ -7,6 +7,9 @@ import { CgLink } from 'react-icons/cg'
 const Link: React.FC<ILinkProps> = ({ link, text, className, showLinkIcon }) => {
 
     const getHostname = (url: string) => {
+
+        if(text) return text
+
         //check if url is valid or not
         const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
