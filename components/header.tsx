@@ -7,6 +7,7 @@ import { DiGithubBadge } from 'react-icons/di';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useRouter } from 'next/router';
 import Link from 'next/link'
+import Banner from '../pages/bannerbar';
 
 const Header: React.FC = () => {
 
@@ -79,8 +80,9 @@ const Header: React.FC = () => {
 					</motion.div>
 				}
 			</AnimatePresence>
-
-			<nav className="w-full px-3 fixed bg-th-light-half dark:bg-th-dark-half backdrop-filter backdrop-blur-2xl z-10 duration-200" >
+			
+			<nav className="w-full fixed bg-th-light-half dark:bg-th-dark-half backdrop-filter backdrop-blur-2xl z-10 duration-200" >
+			<Banner />
 				<div className="p-2 max-w-3xl mx-auto flex flex-row justify-between ">
 					<div className="flex flex-row items-center">
 						{/* <img src="/vercel.svg" className="h-12" /> */}
